@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" viewBox="0 0 799 401" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Border</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Border" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="VVD1" transform="translate(329.000000, 137.000000)">
+                <g id="VVD1-Valve-Status">
+                    <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="5.09667969" y="52" fill="#304FFE">${channels["VVD1:SV:2"].values.val}</tspan>
+                    </text>
+                    <polygon id="Triangle" fill='${channels["VVD1:SV:2"].values.val == "SV_OPEN" ? "#00FF00" : "#FF0000" }' transform="translate(28.000000, 27.500000) scale(-1, -1) rotate(90.000000) translate(-28.000000, -27.500000)" points="28 19 36 36 20 36"/>
+                    <polygon id="Triangle" fill='${channels["VVD1:SV:2"].values.val == "SV_OPEN" ? "#00FF00" : "#FF0000" }' transform="translate(12.000000, 27.500000) scale(1, -1) rotate(90.000000) translate(-12.000000, -27.500000)" points="12 19 20 36 4 36"/>
+                    <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" transform="translate(20.000000, 27.500000) scale(-1, -1) translate(-20.000000, -27.500000)" x="0.5" y="17.5" width="39" height="20"/>
+                    <text id="VVD1" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="4.32617188" y="11">VVD1</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="VVD2" transform="translate(519.000000, 135.000000)">
+                <g id="VVD2-Valve-Status">
+                    <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="4.09667969" y="55" fill="#304FFE">${channels["VVD2:SV:2"].values.val}</tspan>
+                    </text>
+                    <polygon id="Triangle" fill='${channels["VVD2:SV:2"].values.val == "SV_OPEN" ? "#00FF00" : "#FF0000" }'  transform="translate(28.000000, 27.500000) scale(-1, -1) rotate(90.000000) translate(-28.000000, -27.500000)" points="28 19 36 36 20 36"/>
+                    <polygon id="Triangle" fill='${channels["VVD2:SV:2"].values.val == "SV_OPEN" ? "#00FF00" : "#FF0000" }'  transform="translate(12.000000, 27.500000) scale(1, -1) rotate(90.000000) translate(-12.000000, -27.500000)" points="12 19 20 36 4 36"/>
+                    <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" transform="translate(20.000000, 27.500000) scale(-1, -1) translate(-20.000000, -27.500000)" x="0.5" y="17.5" width="39" height="20"/>
+                    <text id="VVD2" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="4.32617188" y="11">VVD2</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="PV1" transform="translate(205.000000, 165.000000)">
+                <g id="PV1-Turbo-Status" transform="translate(29.000000, 50.000000)">
+                    <g>
+                        <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                            <tspan x="45.0966797" y="26" fill="#304FFE">${channels["PV1:TURBO:2"].values.val}</tspan>
+                        </text>
+                        <ellipse id="Oval" fill='${channels["PV1:TURBO:2"].values.val == "TURBO_eingeschaltet" ? "#00FF00" : "#FF0000" }' cx="20" cy="20.5555556" rx="14" ry="13.8888889"/>
+                        <line x1="20.5" y1="33.8888889" x2="27.5" y2="9.44444444" id="Line" stroke="#979797" stroke-linecap="square"/>
+                        <line x1="19.5" y1="33.8888889" x2="12.5" y2="9.44444444" id="Line-2" stroke="#979797" stroke-linecap="square"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="0.5" width="39" height="39"/>
+                        <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="20" cy="20" rx="2.5" ry="2.83333333"/>
+                    </g>
+                </g>
+                 <g id="PV1-Valve-Status" transform="translate(74.000000, 135.000000) rotate(90.000000) translate(-74.000000, -135.000000) translate(54.000000, 100.000000)">
+                    <text id="Value" transform="translate(20.000000, 20.000000) rotate(-90.000000) translate(-20.000000, -20.000000)" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="5.09667969" y="24" fill="#304FFE">${$VALVE}</tspan>
+                    </text>
+                    <g transform="translate(0.000000, 50.000000)">
+                        <polygon id="Triangle" fill='${channels["PV1:PV:2"].values.val == "PV_offen" ? "#00FF00" : "#FF0000" }' transform="translate(28.000000, 10.000000) scale(-1, -1) rotate(90.000000) translate(-28.000000, -10.000000)" points="28 1.5 35.6190476 18.5 20.3809524 18.5"/>
+                        <polygon id="Triangle" fill='${channels["PV1:PV:2"].values.val == "PV_offen" ? "#00FF00" : "#FF0000" }' transform="translate(12.000000, 10.000000) scale(1, -1) rotate(90.000000) translate(-12.000000, -10.000000)" points="12 1.5 19.6190476 18.5 4.38095238 18.5"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" transform="translate(20.000000, 10.000000) scale(-1, -1) translate(-20.000000, -10.000000)" x="0.5" y="0.5" width="39" height="19"/>
+                    </g>
+                </g>
+                <g id="PV1-Pump-Status" transform="translate(29.000000, 180.000000)">
+                    <g>
+                        <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                            <tspan x="45.0966797" y="26" fill="#304FFE">${channels["PV1:PUMP:2"].values.val}</tspan>
+                        </text>
+                        <ellipse id="Oval" fill='${channels["PV1:PUMP:2"].values.val == "PUMP_ein" ? "#00FF00" : "#FF0000" }' cx="20" cy="20.5555556" rx="14" ry="13.8888889"/>
+                        <line x1="20.5" y1="33.8888889" x2="27.5" y2="9.44444444" id="Line" stroke="#979797" stroke-linecap="square"/>
+                        <line x1="19.5" y1="33.8888889" x2="12.5" y2="9.44444444" id="Line-2" stroke="#979797" stroke-linecap="square"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="0.5" width="39" height="39"/>
+                    </g>
+                </g>
+                <line x1="49" y1="90" x2="49" y2="114" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+                <line x1="49" y1="0" x2="49.4761689" y2="49.9977326" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+                <text font-family="Helvetica" font-size="12" fill="#000101">
+                    <tspan x="0.159179688" y="202">PV1</tspan>
+                </text>
+                <line x1="49" y1="155" x2="49" y2="180" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+            </g>
+            <g id="PV2" transform="translate(395.000000, 165.000000)">
+                <g id="PV2-Turbo-Status" transform="translate(29.000000, 50.000000)">
+                    <g>
+                        <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                            <tspan x="48.0966797" y="26" fill="#304FFE">${channels["PV2:TURBO:2"].values.val}</tspan>
+                        </text>
+                        <ellipse id="Oval" fill='${channels["PV2:TURBO:2"].values.val == "TURBO_eingeschaltet" ? "#00FF00" : "#FF0000" }' cx="20" cy="20.5555556" rx="14" ry="13.8888889"/>
+                        <line x1="20.5" y1="33.8888889" x2="27.5" y2="9.44444444" id="Line" stroke="#979797" stroke-linecap="square"/>
+                        <line x1="19.5" y1="33.8888889" x2="12.5" y2="9.44444444" id="Line-2" stroke="#979797" stroke-linecap="square"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="0.5" width="39" height="39"/>
+                        <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="20" cy="20" rx="2.5" ry="2.83333333"/>
+                    </g>
+                </g>
+                 <g id="PV2-Valve-Status" transform="translate(73.000000, 135.000000) rotate(90.000000) translate(-73.000000, -135.000000) translate(53.000000, 101.000000)">
+                    <text id="Value" transform="translate(16.000000, 15.000000) rotate(-90.000000) translate(-16.000000, -15.000000)" font-family="Helvetica" font-size="12" fill="#000101">
+                        <tspan x="1.09667969" y="19" fill="#304FFE">${channels["PV2:PV:2"].values.val}</tspan>
+                    </text>
+                    <g transform="translate(0.000000, 48.000000)">
+                        <polygon id="Triangle" fill='${channels["PV2:PV:2"].values.val == "PV_offen" ? "#00FF00" : "#FF0000" }' transform="translate(28.000000, 10.000000) scale(-1, -1) rotate(90.000000) translate(-28.000000, -10.000000)" points="28 1.5 35.6190476 18.5 20.3809524 18.5"/>
+                        <polygon id="Triangle" fill='${channels["PV2:PV:2"].values.val == "PV_offen" ? "#00FF00" : "#FF0000" }' transform="translate(12.000000, 10.000000) scale(1, -1) rotate(90.000000) translate(-12.000000, -10.000000)" points="12 1.5 19.6190476 18.5 4.38095238 18.5"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" transform="translate(20.000000, 10.000000) scale(-1, -1) translate(-20.000000, -10.000000)" x="0.5" y="0.5" width="39" height="19"/>
+                    </g>
+                </g>
+                <g id="PV2-Pump-Status" transform="translate(29.000000, 180.000000)">
+                    <g>
+                        <text id="Value" font-family="Helvetica" font-size="12" fill="#000101">
+                            <tspan x="48.0966797" y="26" fill="#304FFE">${channels["PV2:PUMP:2"].values.val}</tspan>
+                        </text>
+                        <ellipse id="Oval" fill='${channels["PV2:PUMP:2"].values.val == "PUMP_ein" ? "#00FF00" : "#FF0000" }' cx="20" cy="20.5555556" rx="14" ry="13.8888889"/>
+                        <line x1="20.5" y1="33.8888889" x2="27.5" y2="9.44444444" id="Line" stroke="#979797" stroke-linecap="square"/>
+                        <line x1="19.5" y1="33.8888889" x2="12.5" y2="9.44444444" id="Line-2" stroke="#979797" stroke-linecap="square"/>
+                        <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="0.5" width="39" height="39"/>
+                    </g>
+                </g>
+                <line x1="49" y1="90" x2="49" y2="114" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+                <line x1="49" y1="0" x2="49" y2="50" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+                <line x1="49" y1="155" x2="49" y2="180" id="Line-3" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+                <text font-family="Helvetica" font-size="12" fill="#000101">
+                    <tspan x="0.159179688" y="202">PV2</tspan>
+                </text>
+            </g>
+            <line x1="369" y1="164" x2="519" y2="164" id="Line-4" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+            <line x1="559" y1="164" x2="759" y2="164" id="Line-4" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+            <line x1="140" y1="165" x2="328.998413" y2="164.796806" id="Line-4" stroke="#979797" stroke-width="2" stroke-linecap="square"/>
+            <g id="Ion-Source" transform="translate(29.000000, 135.000000)">
+                <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="0.5" width="110" height="58"/>
+                <text id="IQ" font-family="Helvetica-Bold, Helvetica" font-size="18" font-weight="bold" fill="#000000">
+                    <tspan x="44.4155273" y="35">IQ</tspan>
+                </text>
+            </g>
+            <text id="CW-Strahlführung" font-family="Helvetica-Bold, Helvetica" font-size="20" font-weight="bold" fill="#000000">
+                <tspan x="310.101562" y="19">CW-Strahlführung</tspan>
+            </text>
+            <g id="Domkuehling" transform="translate(543.000000, 257.000000)">
+                <rect id="Rectangle" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="0.5" y="21.5" width="210" height="106"/>
+                <g id="Table" transform="translate(0.000000, 34.000000)" fill="#000101" font-family="Helvetica" font-size="12">
+                    <text id="Pumpe:">
+                        <tspan x="62.6445312" y="11">Pumpe:</tspan>
+                    </text>
+                    <text id="Leitwert:">
+                        <tspan x="58.6484375" y="33">Leitwert:</tspan>
+                    </text>
+                    <text id="Temp-Rucklauf:">
+                        <tspan x="21.3007812" y="55">Temp Rucklauf:</tspan>
+                    </text>
+                    <text id="On/Off" fill="#304FFE">
+                        <tspan x="117" y="11">${channels["IKUTK-0101-EM00200:D10_H_D-WIHA"].values.val}</tspan>
+                    </text>
+                    <text id="0.1uS/cm" fill="#304FFE">
+                        <tspan x="117" y="33">${channels["IKUTK-0101-EB00400:M02_A_D-WIHA"].values.val.toFixed(3)} ${channels["IKUTK-0101-EB00400:M02_A_D-WIHA"].metaInfo.egu}</tspan>
+                    </text>
+                    <text id="31.1-degC" fill="#304FFE">
+                        <tspan x="117" y="55">${channels["IKUTK-0101-EB00803:M02_A_D-WIHA"].values.val.toFixed(1)} ${channels["IKUTK-0101-EB00803:M02_A_D-WIHA"].metaInfo.egu}</tspan>
+                    </text>
+                    <text id="30.0-degC" fill="#304FFE">
+                        <tspan x="117" y="79">${channels["IKUTK-0101-EB00802:M02_A_D-WIHA"].values.val.toFixed(1)} ${channels["IKUTK-0101-EB00802:M02_A_D-WIHA"].metaInfo.egu}</tspan>
+                    </text>
+                    <text id="Temp-Vorlauf:">
+                        <tspan x="30.6230469" y="79">Temp Vorlauf:</tspan>
+                    </text>
+                </g>
+                <text id="Domkühling" font-family="Helvetica" font-size="12" fill="#000101">
+                    <tspan x="66.8183594" y="11">Domkühling</tspan>
+                </text>
+            </g>
+            <g id="GV1" transform="translate(217.000000, 71.000000)">
+                <text id="GV1-GAUGE" font-family="Helvetica" font-size="12" fill="#304FFE">
+                    <tspan x="22.0966797" y="77">${channels["GV1:IST:2"].values.val.toExponential()}</tspan>
+                </text>
+                <rect id="Outer-Rect" stroke="#979797" fill="#D8D8D8" x="18.5" y="0.5" width="39" height="63"/>
+                <rect id="Gauge-Level" fill="#00FF00" transform="translate(31.526179, 37.500228) rotate(-180.000000) translate(-31.526179, -37.500228)" x="26.0261786" y="17.0002285" width="11" height='${42 + 10 * (3 + Math.log10( channels["GV1:IST:2"].values.val )) }'/>
+                <rect id="Inner-Rect" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="24.5" y="15.5" width="14" height="43"/>
+                <text id="Gauge-Label" font-family="Helvetica" font-size="8" fill="#000000">
+                    <tspan x="29.9960938" y="11">GV1</tspan>
+                </text>
+                <text id="Label-10-7" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="59">10-7</tspan>
+                </text>
+                <text id="Label-10-6" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="49">10-6</tspan>
+                </text>
+                <text id="Label-10-5" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="39">10-5</tspan>
+                </text>
+                <text id="Label-10-4" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="29">10-4</tspan>
+                </text>
+                <text id="Label-10-3" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="19">10-3</tspan>
+                </text>
+                <line x1="39" y1="57" x2="43" y2="57" id="Line-10-7" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="47" x2="43" y2="47" id="Line-10-6" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="37" x2="43" y2="37" id="Line-10-5" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="27" x2="43" y2="27" id="Line-10-4" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="17" x2="43" y2="17" id="Line-10-3" stroke="#979797" stroke-linecap="square"/>
+            </g>
+            <g id="GV2" transform="translate(409.000000, 71.000000)">
+                <text id="GV2-GAUGE" font-family="Helvetica" font-size="12" fill="#304FFE">
+                    <tspan x="22.0966797" y="77">${GV2_VALUE}</tspan>
+                </text>
+                <rect id="Outer-Rect" stroke="#979797" fill="#D8D8D8" x="18.5" y="0.5" width="39" height="63"/>
+                <rect id="Gauge-Level" fill="#00FF00" transform="translate(31.526179, 37.500228) rotate(-180.000000) translate(-31.526179, -37.500228)" x="26.0261786" y="17.0002285" width="11" height='${42 + 10 * (3 + Math.log10( channels["GV2:IST:2"].values.val )) }'/>
+                <rect id="Inner-Rect" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="24.5" y="15.5" width="14" height="43"/>
+                <text id="Gauge-Label" font-family="Helvetica" font-size="8" fill="#000000">
+                    <tspan x="29.9960938" y="11">GV2</tspan>
+                </text>
+                <text id="Label-10-7" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="59">10-7</tspan>
+                </text>
+                <text id="Label-10-6" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="49">10-6</tspan>
+                </text>
+                <text id="Label-10-5" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="39">10-5</tspan>
+                </text>
+                <text id="Label-10-4" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="29">10-4</tspan>
+                </text>
+                <text id="Label-10-3" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="19">10-3</tspan>
+                </text>
+                <line x1="39" y1="57" x2="43" y2="57" id="Line-10-7" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="47" x2="43" y2="47" id="Line-10-6" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="37" x2="43" y2="37" id="Line-10-5" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="27" x2="43" y2="27" id="Line-10-4" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="17" x2="43" y2="17" id="Line-10-3" stroke="#979797" stroke-linecap="square"/>
+            </g>
+            <g id="GV3" transform="translate(600.000000, 71.000000)">
+                <text id="GV3-GAUGE" font-family="Helvetica" font-size="12" fill="#304FFE">
+                    <tspan x="22.0966797" y="77">${channels["GV3:IST:2"].values.val.toExponential()}</tspan>
+                </text>
+                <rect id="Outer-Rect" stroke="#979797" fill="#D8D8D8" x="18.5" y="0.5" width="39" height="63"/>
+                <rect id="Gauge-Level" fill="#00FF00" transform="translate(31.526179, 37.500228) rotate(-180.000000) translate(-31.526179, -37.500228)" x="26.0261786" y="17.0002285" width="11" height='${42 + 10 * (3 + Math.log10( channels["GV3:IST:2"].values.val )) }'/>
+                <rect id="Inner-Rect" stroke="#979797" fill-opacity="0.5" fill="#D8D8D8" x="24.5" y="15.5" width="14" height="43"/>
+                <text id="Gauge-Label" font-family="Helvetica" font-size="8" fill="#000000">
+                    <tspan x="29.9960938" y="11">GV3</tspan>
+                </text>
+                <text id="Label-10-7" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="59">10-7</tspan>
+                </text>
+                <text id="Label-10-6" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="49">10-6</tspan>
+                </text>
+                <text id="Label-10-5" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="39">10-5</tspan>
+                </text>
+                <text id="Label-10-4" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="29">10-4</tspan>
+                </text>
+                <text id="Label-10-3" font-family="Helvetica" font-size="5" fill="#000000">
+                    <tspan x="44.4963379" y="19">10-3</tspan>
+                </text>
+                <line x1="39" y1="57" x2="43" y2="57" id="Line-10-7" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="47" x2="43" y2="47" id="Line-10-6" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="37" x2="43" y2="37" id="Line-10-5" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="27" x2="43" y2="27" id="Line-10-4" stroke="#979797" stroke-linecap="square"/>
+                <line x1="39" y1="17" x2="43" y2="17" id="Line-10-3" stroke="#979797" stroke-linecap="square"/>
+            </g>
+        </g>
+        <text id="TIME" font-family="Helvetica" font-size="12" fill="#304FFE">
+            <tspan x="650.0" y="19">${channels["XHIPA:TIME"].values.val}</tspan>
+        </text>
+        <g id="Group" transform="translate(0.000000, 3.000000)">
+            <g id="Navigation" transform="translate(692.000000, 170.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="63" height="19" rx="2"/>
+                <text id="Label-860-vakuum" font-family="Helvetica" font-size="8" fill="#0D47A1">
+                    <tspan x="3" y="13">> 860 VAKUUM</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
