@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <use transform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="vakcw_symbols.svg"/>
+  </defs>
+  <defs>
+    <style>
+      .label_l {
+         font: bold 40px sans-serif;
+         fill: black;
+      }
+      .label_m {
+        font: bold 28px sans-serif;
+        fill: black;
+      }
+      .value {
+         font: bold 28px sans-serif;
+         fill: blue;
+      }
+    </style>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -200, 315)" style="">
+    <g id="PV1 Section">
+      <use width="100" height="100" style="" transform="matrix(1, 0, 0, 1, 500, 400)" xlink:href="vakcw_symbols.svg#my_valve"/>
+      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 200)" style="" xlink:href="vakcw_symbols.svg#my_pump"/>
+      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 600)" style="" xlink:href="vakcw_symbols.svg#my_turbo_pump"/>
+      <line style="stroke: darkgray; stroke-width: 5px" x1="550" y1="300" x2="550" y2="400"/>
+      <line style="stroke: darkgray; stroke-width: 5px" x1="550" y1="500" x2="550" y2="600"/>
+      <text x="435" y="660" class="label_m">PV1</text>
+      <text x="615" y="260" class="value">ON</text>
+      <text x="600" y="460" class="value">OPEN</text>
+      <text x="615" y="660" class="value">ON</text>
+    </g>
+    <g id="PV2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
+      <use width="100" height="100" style="" transform="matrix(1, 0, 0, 1, 500, 400)" xlink:href="vakcw_symbols.svg#my_valve"/>
+      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 200)" style="" xlink:href="vakcw_symbols.svg#my_pump"/>
+      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 600)" style="" xlink:href="vakcw_symbols.svg#my_turbo_pump"/>
+      <line style="stroke: darkgray; stroke-width: 5px" x1="550" y1="300" x2="550" y2="400"/>
+      <line style="stroke: darkgray; stroke-width: 5px" x1="550" y1="500" x2="550" y2="600"/>
+      <text x="435" y="660" class="label_m">PV1</text>
+      <text x="615" y="260" class="value">ON</text>
+      <text x="600" y="460" class="value">OPEN</text>
+      <text x="615" y="660" class="value">ON</text>
+    </g>
+    <g id="VVD1 Section">
+      <use width="100" height="100" style="" transform="matrix(0, 1, -1, 0, 800, 0)" xlink:href="vakcw_symbols.svg#my_valve"/>
+      <text x="750" y="10" class="label_m" text-anchor="middle">VVD1</text>
+      <text x="750" y="110" class="value" text-anchor="middle">OPEN</text>
+    </g>
+    <g id="VVD2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
+      <use width="100" height="100" style="" transform="matrix(0, 1, -1, 0, 800, 0)" xlink:href="vakcw_symbols.svg#my_valve"/>
+      <text x="750" y="10" class="label_m" text-anchor="middle">VVD2</text>
+      <text x="750" y="110" class="value" text-anchor="middle">OPEN</text>
+    </g>
+    <g id="IonSource">
+      <rect x="200" width="200" height="100" style="fill: lightgray; stroke: darkgray; stroke-width:4"/>
+      <text class="label_l" x="280" y="60">IQ</text>
+    </g>
+    <g id="Gauge GV1">
+      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 500, -290)" xlink:href="#my_gauge"/>
+      <text x="550" y="-290" class="label_m" text-anchor="middle">GV1</text>
+      <text x="550" y="-70" class="value" text-anchor="middle">1.2e-5</text>
+    </g>
+    <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 0)">
+      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 500, -290)" xlink:href="#my_gauge"/>
+      <text x="550" y="-290" class="label_m" text-anchor="middle">GV2</text>
+      <text x="550" y="-70" class="value" text-anchor="middle">1.2e-5</text>
+    </g>
+    <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 0)">
+      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 500, -290)" xlink:href="#my_gauge"/>
+      <text x="550" y="-290" class="label_m" text-anchor="middle">GV3</text>
+      <text x="550" y="-70" class="value" text-anchor="middle">1.2e-5</text>
+    </g>
+    <g id="Connecting Lines">
+      <line style="stroke: darkgray; stroke-width: 5px;" x1="550" y1="50" x2="550" y2="200"/>
+      <line style="stroke: darkgray; stroke-width: 5px;" x1="950" y1="50" x2="950" y2="200"/>
+      <line style="stroke: darkgray; stroke-width: 5px;" x1="400" y1="50" x2="700" y2="50"/>
+      <line style="stroke: darkgray; stroke-width: 5px;" x1="800" y1="50" x2="1100" y2="50"/>
+      <line style="stroke: darkgray; stroke-width: 5px;" x1="1200" y1="50" x2="1500" y2="50"/>
+    </g>
+  </g>
+</svg>
