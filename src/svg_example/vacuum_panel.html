@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+
+    <!-- Load the Wica library -->
+    <script src="wica/wica.js" type="module"></script>
+
+    <title>SVG Demo</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            border:0;
+        }
+
+        html {
+            font-family: "Helvetica Neue",sans-serif;
+            font-size: 1.8vmin;
+            background-color: grey;
+            width: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            height: 80%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div data-wica-channel-name="XHIPA:TIME"  onchange="update( event, '$TIME'   )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="GV1:IST:2"   onchange="update( event, '$GV1_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="GV2:IST:2"   onchange="update( event, '$GV2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="GV3:IST:2"   onchange="update( event, '$GV3_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="VVD1:CSV:2"  onchange="update( event, '$VVD1_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="VVD1:SV:2"   onchange="update( event, '$VVD1_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="VVD2:CSV:2"  onchange="update( event, '$VVD2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="VVD2:SV:2"   onchange="update( event, '$VVD2_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="PV1:CPUM:2"  onchange="update( event, '$PV1_PUMP'  )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV1:TURBO:2" onchange="update( event, '$PV1_TURBO' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV1:PV:2"    onchange="update( event, '$PV1_VALVE' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV1:PUMP:2"  onchange="update( event, '$PV1_ZZ' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="PV2:CHV:2"   onchange="update( event, '$PV2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV2:HV:2"    onchange="update( event, '$PV2_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="PV2:CPUM:2"  onchange="update( event, '$PV2_PUMP'  )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV2:TURBO:2" onchange="update( event, '$PV2_TURBO' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV2:PV:2"    onchange="update( event, '$PV2_VALVE' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="PV2:PUMP:2"  onchange="update( event, '$PV2_ZZ' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update( event, '$DK_PUMP' )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update( event, '$DK_LEITWERK'  )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update( event, '$DK_TEMP_VOR'  )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update( event, '$DK_TEMP_RUCK' )" data-wica-rendering-props='{ "disable" : true }'></div>
+
+    <object id="svgObject" type="image/svg+xml" data="vacuum_panel.svg"> </object>
+
+    <script defer="true">
+
+        let svgDoc = null;
+        window.onload = () => {
+            const svgElement = document.getElementById( "svgObject" );
+            svgDoc = svgElement.contentDocument;
+        };
+
+        function find( id ) {
+            return svgDoc.getElementById( id );
+        }
+
+        function update( event, svgVar ) {
+            const widget = event.target;
+            const myTarget = find( svgVar );
+            if ( myTarget == null ) {
+                return;
+            }
+            myTarget.textContent = event.channelValueLatest.val;
+        }
+
+    </script>
+
+</body>
+</html>
+
