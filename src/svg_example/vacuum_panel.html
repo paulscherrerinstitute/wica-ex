@@ -31,62 +31,123 @@
             height: 80%;
         }
 
+        .hidden {
+           display: none;
+        }
+
     </style>
 
 </head>
 
 <body>
-    <div data-wica-channel-name="XHIPA:TIME"  onchange="update( event, '$TIME'   )" data-wica-rendering-props='{ "disable" : true }'></div>
+    <div class="hidden">
 
-    <div data-wica-channel-name="GV1:IST:2"   onchange="update( event, '$GV1_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="GV2:IST:2"   onchange="update( event, '$GV2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="GV3:IST:2"   onchange="update( event, '$GV3_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- HIPA Clock -->
+        <div data-wica-channel-name="XHIPA:TIME"  onchange="update_value( event, '$TIME_TEXT' )"></div>
 
-    <div data-wica-channel-name="VVD1:CSV:2"  onchange="update( event, '$VVD1_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="VVD1:SV:2"   onchange="update( event, '$VVD1_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- GV1, GV2, GV3 Pressure Gauges: Text Values -->
+        <div data-wica-channel-name="GV1:IST:2"   onchange="update_value( event, '$GV1_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
+        <div data-wica-channel-name="GV2:IST:2"   onchange="update_value( event, '$GV2_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
+        <div data-wica-channel-name="GV3:IST:2"   onchange="update_value( event, '$GV3_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
 
-    <div data-wica-channel-name="VVD2:CSV:2"  onchange="update( event, '$VVD2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="VVD2:SV:2"   onchange="update( event, '$VVD2_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- VVD1, VVD2 Valves: Text Values -->
+        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_value( event, '$VVD1_VALVE_TEXT'  )"></div>
+        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_value( event, '$VVD2_VALVE_TEXT'  )"></div>
 
-    <div data-wica-channel-name="PV1:CPUM:2"  onchange="update( event, '$PV1_PUMP'  )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV1:TURBO:2" onchange="update( event, '$PV1_TURBO' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV1:PV:2"    onchange="update( event, '$PV1_VALVE' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV1:PUMP:2"  onchange="update( event, '$PV1_ZZ' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- VVD1, VVD2 Valves: Symbol Colors -->
+        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_color( event, '$VVD1_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
+        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_color( event, '$VVD2_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
 
-    <div data-wica-channel-name="PV2:CHV:2"   onchange="update( event, '$PV2_XX' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV2:HV:2"    onchange="update( event, '$PV2_YY' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- PV1 Section: Text Values -->
+        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_value( event, '$PV1_TURBO_TEXT' )"></div>
+        <div data-wica-channel-name="PV1:PV:2"    onchange="update_value( event, '$PV1_VALVE_TEXT' )"></div>
+        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_value( event, '$PV1_PUMP_TEXT'  )"></div>
 
-    <div data-wica-channel-name="PV2:CPUM:2"  onchange="update( event, '$PV2_PUMP'  )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV2:TURBO:2" onchange="update( event, '$PV2_TURBO' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV2:PV:2"    onchange="update( event, '$PV2_VALVE' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="PV2:PUMP:2"  onchange="update( event, '$PV2_ZZ' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- PV1 Section: Symbol Colors -->
+        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_color( event, '$PV1_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PV1:PV:2"    onchange="update_color( event, '$PV1_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_color( event, '$PV1_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
 
-    <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update( event, '$DK_PUMP' )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update( event, '$DK_LEITWERK'  )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update( event, '$DK_TEMP_VOR'  )" data-wica-rendering-props='{ "disable" : true }'></div>
-    <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update( event, '$DK_TEMP_RUCK' )" data-wica-rendering-props='{ "disable" : true }'></div>
+        <!-- PV2 Beamline Section: Text Values -->
+        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_value( event, '$PV2_TURBO_TEXT' )"></div>
+        <div data-wica-channel-name="PV2:PV:2"    onchange="update_value( event, '$PV2_VALVE_TEXT' )"></div>
+        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_value( event, '$PV2_PUMP_TEXT'  )"></div>
+
+        <!-- PV2 Beamline Section: Symbol Colors -->
+        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_color( event, '$PV2_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PV2:PV:2"    onchange="update_color( event, '$PV2_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_color( event, '$PV2_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
+
+        <!-- Dome Cooling Info Box: Text Values -->
+        <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update_value( event, '$DK_PUMP_TEXT' )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update_value( event, '$DK_LEITWERK_TEXT',  true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update_value( event, '$DK_TEMP_VOR_TEXT',  true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update_value( event, '$DK_TEMP_RUCK_TEXT', true )"></div>
+    </div>
 
     <object id="svgObject" type="image/svg+xml" data="vacuum_panel.svg"> </object>
 
-    <script defer="true">
+    <script>
 
         let svgDoc = null;
-        window.onload = () => {
-            const svgElement = document.getElementById( "svgObject" );
-            svgDoc = svgElement.contentDocument;
-        };
 
-        function find( id ) {
-            return svgDoc.getElementById( id );
-        }
+        function update_value( event, svgVar, optUnits = false )
+        {
+            if ( svgDoc === null ) {
+                const svgElement = document.getElementById( "svgObject" );
+                svgDoc = svgElement.contentDocument;
+            }
 
-        function update( event, svgVar ) {
-            const widget = event.target;
-            const myTarget = find( svgVar );
+            const myTarget = svgDoc.getElementById( svgVar );
             if ( myTarget == null ) {
                 return;
             }
-            myTarget.textContent = event.channelValueLatest.val;
+
+            const units = optUnits ? event.channelMetadata.egu : "";
+            updateTextContent( myTarget, event.channelValueLatest.val + " " + units  );
+        }
+
+        function updateTextContent( svgElement, value )
+        {
+            svgElement.textContent = value;
+        }
+
+
+        function update_color( event, svgVar, okValue )
+        {
+            if ( svgDoc === null ) {
+                const svgElement = document.getElementById( "svgObject" );
+                svgDoc = svgElement.contentDocument;
+            }
+
+            const mySymbol = svgDoc.getElementById( svgVar );
+            if ( mySymbol == null ) {
+                return;
+            }
+
+            updateVisualState( mySymbol, event.channelValueLatest.val, okValue )
+        }
+
+        function updateVisualState( svgElement, value, okValue, nokValue )
+        {
+            const errColor ="orange";
+            const nokColor = "red";
+            const okColor = "limegreen";
+
+            switch ( value )
+            {
+                case okValue:
+                    svgElement.style.fill = okColor;
+                    break;
+
+                case nokValue:
+                    svgElement.style.fill = nokColor;
+                    break;
+
+                default:
+                    svgElement.style.fill = errColor;
+                    break;
+            }
         }
 
     </script>

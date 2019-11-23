@@ -4,39 +4,39 @@
   <defs>
 
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
-      <rect x="22" y="2" width="56" height="96" style="fill: lightgray; stroke: darkgray; stroke-width:4"/>
-      <path id="status" d="M 30 15 H 70 L 30 85 H 70 L 30 15" fill="limegreen"/>
+      <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15"/>
     </symbol>
 
     <symbol id="vacuum_pump" viewBox="0 0 100 100">
-      <rect x="2" y="2" width="96" height="96" style="fill: lightgray; stroke: darkgray; stroke-width:4"/>
-      <circle id="status" cx="50" cy="50" r="35" fill="limegreen"/>
-      <line x1="45" y1="90" x2="30" y2="10" style="stroke: lightgray; stroke-width:4"/>
-      <line x1="55" y1="90" x2="70" y2="10" style="stroke: lightgray; stroke-width:4"/>
+      <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <circle cx="50" cy="50" r="35"/>
+      <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
+      <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
-      <rect x="2" y="2" width="96" height="96" style="fill: lightgray; stroke: darkgray; stroke-width:4"/>
-      <circle id="status" cx="50" cy="50" r="35" fill="limegreen"/>
+      <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <circle cx="50" cy="50" r="35"/>
       <circle cx="50" cy="50" r="5" fill="lightgray"/>
-      <line x1="45" y1="90" x2="30" y2="10" style="stroke: lightgray; stroke-width:4"/>
-      <line x1="55" y1="90" x2="70" y2="10" style="stroke: lightgray; stroke-width:4"/>
+      <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
+      <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="my_gauge" viewBox="0 0 100 200">
-      <rect x="2" y="12" width="96" height="176" style="fill: lightgray; stroke: darkgray; stroke-width: 4;"/>
-      <rect x="20" y="30" width="40" height="140" style="fill: limegreen; stroke: darkgray; stroke-width: 2;"/>
-      <rect x="21" y="31" width="39" height="9" style="fill: lightgray;"/>
-      <line style="stroke: darkgray; stroke-width: 2px;" x1="60" y1="40" x2="65" y2="40"/>
-      <line style="stroke: darkgray; stroke-width: 2px;" x1="60" y1="70" x2="65" y2="70"/>
-      <line style="stroke: darkgray; stroke-width: 2px;" x1="60" y1="100" x2="65" y2="100"/>
-      <line style="stroke: darkgray; stroke-width: 2px;" x1="60" y1="130" x2="65" y2="130"/>
-      <line style="stroke: darkgray; stroke-width: 2px;" x1="60" y1="160" x2="65" y2="160"/>
-      <text x="68" y="44" style="font-size: 12px;">10-3</text>
-      <text x="68" y="74" style="font-size: 12px;">10-4</text>
-      <text x="68" y="104" style="font-size: 12px;">10-5</text>
-      <text x="68" y="134" style="font-size: 12px;">10-6</text>
-      <text x="68" y="164" style="font-size: 12px;">10-7</text>
+      <rect x="2" y="12" width="96" height="176" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <rect x="20" y="30" width="40" height="140" fill="limegreen" stroke="darkgray" stroke-width="2"/>
+      <rect x="21" y="31" width="39" height="9" fill="lightgray"/>
+      <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="130" x2="65" y2="130" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="160" x2="65" y2="160" stroke="darkgray" stroke-width="2" />
+      <text x="68" y="44"  font-size="12">10-3</text>
+      <text x="68" y="74"  font-size="12">10-4</text>
+      <text x="68" y="104" font-size="12">10-5</text>
+      <text x="68" y="134" font-size="12">10-6</text>
+      <text x="68" y="164" font-size="12">10-7</text>
     </symbol>
 
     <style>
@@ -77,43 +77,43 @@
 
     <g id="Header">
       <text class="label_l" x="750" y="40" text-anchor="middle">Vacuum Beamline</text>
-      <text id="$TIME" class="value" x="1500" y="40" text-anchor="end">2019-11-22 10:54:00</text>
+      <text id="$TIME_TEXT" class="value" x="1500" y="40" text-anchor="end">2019-11-22 10:54:00</text>
     </g>
 
     <g id="PV1 Section">
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
+      <use id="$PV1_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
+      <use id="$PV1_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
+      <use id="$PV1_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
       <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
       <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
       <text x="235" y="960" class="label_m">PV1</text>
-      <text id="$PV1_TURBO" class="value" x="415" y="560">ON</text>
-      <text id="$PV1_VALVE" class="value" x="400" y="760">OPEN</text>
-      <text id="$PV1_PUMP"  class="value" x="415" y="960">ON</text>
+      <text id="$PV1_TURBO_TEXT" class="value" x="415" y="560">ON</text>
+      <text id="$PV1_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
+      <text id="$PV1_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
     </g>
 
     <g id="PV2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
-      <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
+      <use id="$PV2_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
+      <use id="$PV2_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
+      <use id="$PV2_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
       <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
       <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
       <text x="235" y="960" class="label_m">PV2</text>
-      <text id="$PV2_TURBO" class="value" x="415" y="560">ON</text>
-      <text id="$PV2_VALVE" class="value" x="400" y="760">OPEN</text>
-      <text id="$PV2_PUMP"  class="value" x="415" y="960">ON</text>
+      <text id="$PV2_TURBO_TEXT" class="value" x="415" y="560">ON</text>
+      <text id="$PV2_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
+      <text id="$PV2_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
     </g>
 
     <g id="VVD1 Section">
-      <use id= "$VVD1_XX" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
+      <use id= "$VVD1_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
       <text class="label_m" x="550" y="310" text-anchor="middle">VVD1</text>
-      <text id= "$VVD1_YY" class="value"   x="550" y="410" text-anchor="middle">OPEN</text>
+      <text id= "$VVD1_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
     </g>
 
     <g id="VVD2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
-      <use id= "$VVD2_XX" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
+      <use id= "$VVD2_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
       <text class="label_m" x="550" y="310" text-anchor="middle">VVD2</text>
-      <text id= "$VVD2_YY" class="value"   x="550" y="410" text-anchor="middle">OPEN</text>
+      <text id= "$VVD2_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
     </g>
 
     <g id="IonSource">
@@ -123,20 +123,20 @@
 
     <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 15)">>
       <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
-      <text class="label_m" x="350" y="75"  text-anchor="middle">GV1</text>
-      <text id="$GV1_XX" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text class="label_m" x="350" y="75" text-anchor="middle">GV1</text>
+      <text id="$GV1_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
     </g>
 
     <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 15)">
       <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
       <text class="label_m" x="350" y="75"  text-anchor="middle">GV2</text>
-      <text id="$GV2_XX" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text id="$GV2_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
     </g>
 
     <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 15)">
       <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
       <text class="label_m" x="350" y="75"  text-anchor="middle">GV3</text>
-      <text id="$GV3_XX" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text id="$GV3_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
     </g>
 
     <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
@@ -151,10 +151,10 @@
       <text class="label_m" x="250" y="400" text-anchor="end">Leitwerk</text>
       <text class="label_m" x="250" y="450" text-anchor="end">Temp Vorlauf</text>
       <text class="label_m" x="250" y="500" text-anchor="end">Temp Rucklauf</text>
-      <text id= "$DK_PUMP" class="value" x="265" y="350">UNKNOWN</text>
-      <text id= "$DK_LEITWERK" class="value" x="265" y="400">9.999 uS/cm</text>
-      <text id= "$DK_TEMP_VOR" class="value" x="265" y="450">99.9 degC</text>
-      <text id= "$DK_TEMP_RUCK" class="value" x="265" y="500">99.9 degC</text>
+      <text id= "$DK_PUMP_TEXT" class="value" x="265" y="350">UNKNOWN</text>
+      <text id= "$DK_LEITWERK_TEXT" class="value" x="265" y="400">9.999 uS/cm</text>
+      <text id= "$DK_TEMP_VOR_TEXT" class="value" x="265" y="450">99.9 degC</text>
+      <text id= "$DK_TEMP_RUCK_TEXT" class="value" x="265" y="500">99.9 degC</text>
     </g>
 
     <g id="Connecting Lines">
