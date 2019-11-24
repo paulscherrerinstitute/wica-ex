@@ -5,19 +5,19 @@
 
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15"/>
+      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>/>
     </symbol>
 
     <symbol id="vacuum_pump" viewBox="0 0 100 100">
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <circle cx="50" cy="50" r="35"/>
+      <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <circle cx="50" cy="50" r="35"/>
+      <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <circle cx="50" cy="50" r="5" fill="lightgray"/>
       <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
@@ -25,8 +25,8 @@
 
     <symbol id="my_gauge" viewBox="0 0 100 200">
       <rect x="2" y="12" width="96" height="176" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <rect x="20" y="30" width="40" height="140" fill="limegreen" stroke="darkgray" stroke-width="2"/>
-      <rect x="21" y="31" width="39" height="9" fill="lightgray"/>
+      <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
+      <rect x="22" width="36" fill="limegreen" style="height: var(--gauge_level_height); y:var(--gauge_level_y)"/>
       <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
@@ -52,11 +52,11 @@
       }
       .label_l {
          font: bold 32px sans-serif;
-         fill: black;
+         fill: darkblue;
       }
       .label_m {
         font: bold 24px sans-serif;
-        fill: black;
+        fill: darkblue;
       }
       .value {
          font: 24px sans-serif;
@@ -65,13 +65,6 @@
     </style>
 
   </defs>
-
-
-   <script>
-    function doit() {
-
-    }
-  </script>
 
   <g>
 
@@ -121,22 +114,22 @@
       <text class="label_l" x="100" y="360" text-anchor="middle">Ion Source</text>
     </g>
 
-    <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 15)">>
-      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
+    <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 15)">
+      <use id="$GV1_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
       <text class="label_m" x="350" y="75" text-anchor="middle">GV1</text>
-      <text id="$GV1_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text id="$GV1_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
     </g>
 
     <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 15)">
-      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
+      <use id="$GV2_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
       <text class="label_m" x="350" y="75"  text-anchor="middle">GV2</text>
-      <text id="$GV2_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text id="$GV2_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
     </g>
 
     <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 15)">
-      <use width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
+      <use id="$GV3_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
       <text class="label_m" x="350" y="75"  text-anchor="middle">GV3</text>
-      <text id="$GV3_TEXT" class="value" x="350" y="295" text-anchor="middle">1.2e-5</text>
+      <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
     </g>
 
     <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">

@@ -43,111 +43,149 @@
     <div class="hidden">
 
         <!-- HIPA Clock -->
-        <div data-wica-channel-name="XHIPA:TIME"  onchange="update_value( event, '$TIME_TEXT' )"></div>
+        <div data-wica-channel-name="XHIPA:TIME"  onchange="update_svg_string_value( event, '$TIME_TEXT' )"></div>
 
-        <!-- GV1, GV2, GV3 Pressure Gauges: Text Values -->
-        <div data-wica-channel-name="GV1:IST:2"   onchange="update_value( event, '$GV1_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
-        <div data-wica-channel-name="GV2:IST:2"   onchange="update_value( event, '$GV2_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
-        <div data-wica-channel-name="GV3:IST:2"   onchange="update_value( event, '$GV3_TEXT'  )" data-wica-channel-props='{ "prec" : 12 }'></div>
-
-        <!-- VVD1, VVD2 Valves: Text Values -->
-        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_value( event, '$VVD1_VALVE_TEXT'  )"></div>
-        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_value( event, '$VVD2_VALVE_TEXT'  )"></div>
-
-        <!-- VVD1, VVD2 Valves: Symbol Colors -->
-        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_color( event, '$VVD1_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
-        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_color( event, '$VVD2_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
+         <!-- VVD1, VVD2 Valves: Text Values -->
+        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_svg_string_value( event, '$VVD1_VALVE_TEXT' )"></div>
+        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_svg_string_value( event, '$VVD2_VALVE_TEXT' )"></div>
 
         <!-- PV1 Section: Text Values -->
-        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_value( event, '$PV1_TURBO_TEXT' )"></div>
-        <div data-wica-channel-name="PV1:PV:2"    onchange="update_value( event, '$PV1_VALVE_TEXT' )"></div>
-        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_value( event, '$PV1_PUMP_TEXT'  )"></div>
-
-        <!-- PV1 Section: Symbol Colors -->
-        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_color( event, '$PV1_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
-        <div data-wica-channel-name="PV1:PV:2"    onchange="update_color( event, '$PV1_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
-        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_color( event, '$PV1_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
+        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_svg_string_value( event, '$PV1_TURBO_TEXT' )"></div>
+        <div data-wica-channel-name="PV1:PV:2"    onchange="update_svg_string_value( event, '$PV1_VALVE_TEXT' )"></div>
+        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_svg_string_value( event, '$PV1_PUMP_TEXT'  )"></div>
 
         <!-- PV2 Beamline Section: Text Values -->
-        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_value( event, '$PV2_TURBO_TEXT' )"></div>
-        <div data-wica-channel-name="PV2:PV:2"    onchange="update_value( event, '$PV2_VALVE_TEXT' )"></div>
-        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_value( event, '$PV2_PUMP_TEXT'  )"></div>
-
-        <!-- PV2 Beamline Section: Symbol Colors -->
-        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_color( event, '$PV2_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
-        <div data-wica-channel-name="PV2:PV:2"    onchange="update_color( event, '$PV2_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
-        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_color( event, '$PV2_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
+        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_svg_string_value( event, '$PV2_TURBO_TEXT' )"></div>
+        <div data-wica-channel-name="PV2:PV:2"    onchange="update_svg_string_value( event, '$PV2_VALVE_TEXT' )"></div>
+        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_svg_string_value( event, '$PV2_PUMP_TEXT'  )"></div>
 
         <!-- Dome Cooling Info Box: Text Values -->
-        <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update_value( event, '$DK_PUMP_TEXT' )"></div>
-        <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update_value( event, '$DK_LEITWERK_TEXT',  true )"></div>
-        <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update_value( event, '$DK_TEMP_VOR_TEXT',  true )"></div>
-        <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update_value( event, '$DK_TEMP_RUCK_TEXT', true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update_svg_string_value( event, '$DK_PUMP_TEXT' )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_LEITWERK_TEXT',  3, true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_TEMP_VOR_TEXT',  1, true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_TEMP_RUCK_TEXT', 1, true )"></div>
+
+        <!-- GV1, GV2, GV3 Pressure Gauges: Text Values -->
+        <!-- Note: need to request that fata is transferred with high precision because the vacuum values can be as low as 10-8 mbar -->
+        <div data-wica-channel-name="GV1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV1_GAUGE_TEXT', 3, true, true )"></div>
+        <div data-wica-channel-name="GV2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV2_GAUGE_TEXT', 3, true, true )"></div>
+        <div data-wica-channel-name="GV3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV3_GAUGE_TEXT', 3, true, true )"></div>
+
+        <!-- GV1, GV2, GV3 Pressure Gauges: Symbol Levels -->
+        <!-- Note: need to request that fata is transferred with high precision because the vacuum values can be as low as 10-8 mbar -->
+        <div data-wica-channel-name="GV1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GV1_GAUGE_SYMBOL' )"></div>
+        <div data-wica-channel-name="GV2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GV2_GAUGE_SYMBOL' )"></div>
+        <div data-wica-channel-name="GV3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GV3_GAUGE_SYMBOL' )"></div>
+
+        <!-- VVD1, VVD2 Valves: Symbol Colors -->
+        <div data-wica-channel-name="VVD1:SV:2"   onchange="update_svg_component_color( event, '$VVD1_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
+        <div data-wica-channel-name="VVD2:SV:2"   onchange="update_svg_component_color( event, '$VVD2_VALVE_SYMBOL', 'SV_OPEN', 'SV_CLOSED' )"></div>
+
+        <!-- PV1 Section: Symbol Colors -->
+        <div data-wica-channel-name="PV1:TURBO:2" onchange="update_svg_component_color( event, '$PV1_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PV1:PV:2"    onchange="update_svg_component_color( event, '$PV1_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PV1:CPUM:2"  onchange="update_svg_component_color( event, '$PV1_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
+
+        <!-- PV2 Beamline Section: Symbol Colors -->
+        <div data-wica-channel-name="PV2:TURBO:2" onchange="update_svg_component_color( event, '$PV2_TURBO_SYMBOL', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PV2:PV:2"    onchange="update_svg_component_color( event, '$PV2_VALVE_SYMBOL', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PV2:CPUM:2"  onchange="update_svg_component_color( event, '$PV2_PUMP_SYMBOL',  'EIN', 'AUS' )"></div>
+
     </div>
 
-    <object id="svgObject" type="image/svg+xml" data="vacuum_panel.svg"> </object>
+    <object id="svgHostElement" type="image/svg+xml" data="vacuum_panel.svg"> </object>
 
     <script>
 
         let svgDoc = null;
 
-        function update_value( event, svgVar, optUnits = false )
+        function init_svg_document_ref()
         {
             if ( svgDoc === null ) {
-                const svgElement = document.getElementById( "svgObject" );
+                const svgElement = document.getElementById( "svgHostElement" );
                 svgDoc = svgElement.contentDocument;
             }
+        }
 
-            const myTarget = svgDoc.getElementById( svgVar );
-            if ( myTarget == null ) {
+        function update_svg_numeric_value(event, svgEleId, fractionDigits, optUnits = false, optExp = false )
+        {
+            init_svg_document_ref();
+            const targetElement = svgDoc.getElementById( svgEleId );
+            if ( targetElement == null ) {
                 return;
             }
+            const value = targetElement.textContent = optExp ?
+                event.channelValueLatest.val.toExponential( fractionDigits ):
+                event.channelValueLatest.val.toFixed( fractionDigits );
 
             const units = optUnits ? event.channelMetadata.egu : "";
-            updateTextContent( myTarget, event.channelValueLatest.val + " " + units  );
+            targetElement.textContent = value + " " + units;
         }
 
-        function updateTextContent( svgElement, value )
+        function update_svg_string_value(event, svgEleId, optUnits = false )
         {
-            svgElement.textContent = value;
-        }
-
-
-        function update_color( event, svgVar, okValue )
-        {
-            if ( svgDoc === null ) {
-                const svgElement = document.getElementById( "svgObject" );
-                svgDoc = svgElement.contentDocument;
-            }
-
-            const mySymbol = svgDoc.getElementById( svgVar );
-            if ( mySymbol == null ) {
+            init_svg_document_ref();
+            const targetElement = svgDoc.getElementById( svgEleId );
+            if ( targetElement == null ) {
                 return;
             }
-
-            updateVisualState( mySymbol, event.channelValueLatest.val, okValue )
+            const units = optUnits ? event.channelMetadata.egu : "";
+            targetElement.textContent = event.channelValueLatest.val + " " + units ;
         }
 
-        function updateVisualState( svgElement, value, okValue, nokValue )
+        function update_svg_component_color(event, svgElementId, okValue, nokValue )
         {
-            const errColor ="orange";
+            const errColor = "orange";
             const nokColor = "red";
             const okColor = "limegreen";
 
-            switch ( value )
+            init_svg_document_ref();
+            const svgElement = svgDoc.getElementById( svgElementId );
+            if ( svgElement == null ) {
+                return;
+            }
+
+            switch ( event.channelValueLatest.val )
             {
                 case okValue:
-                    svgElement.style.fill = okColor;
+                    svgElement.style.setProperty( "--component_fill_color", okColor );
                     break;
 
                 case nokValue:
-                    svgElement.style.fill = nokColor;
+                    svgElement.style.setProperty( "--component_fill_color", nokColor );
                     break;
 
                 default:
-                    svgElement.style.fill = errColor;
+                    svgElement.style.setProperty( "--component_fill_color", errColor );
                     break;
             }
+        }
+
+        function update_svg_gauge_level( event, svgElementId )
+        {
+            init_svg_document_ref();
+
+            const svgElement = svgDoc.getElementById( svgElementId );
+            if ( svgElement == null ) {
+                return;
+            }
+
+            const value =  event.channelValueLatest.val;
+
+            // Calculation is derived as follows:
+            // Pressure > 10-3:  Y=39, Height = 129
+            // Pressure = 10-3:  Y=40, Height = 128
+            // Pressure = 10-7:  Y=160, Height = 8
+            // Pressure < 10-7:  Y=161, Height = 7
+            const gauge_level_height = clamp( 160 + (30 * ( 2 + Math.log10( value ) ) ), 7, 129 );
+            const gauge_level_y = 168 - gauge_level_height;
+
+            svgElement.style.setProperty( "--gauge_level_height", gauge_level_height );
+            svgElement.style.setProperty( "--gauge_level_y", gauge_level_y );
+        }
+
+        function clamp( num, min, max ) {
+            return num <= min ? min : num >= max ? max : num;
         }
 
     </script>
