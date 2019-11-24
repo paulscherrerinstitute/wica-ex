@@ -171,17 +171,11 @@
             }
 
             const value =  event.channelValueLatest.val;
-
             // Calculation is derived as follows:
-            // Pressure > 10-3:  Y=39, Height = 129
-            // Pressure = 10-3:  Y=40, Height = 128
-            // Pressure = 10-7:  Y=160, Height = 8
-            // Pressure < 10-7:  Y=161, Height = 7
-            const gauge_level_height = clamp( 160 + (30 * ( 2 + Math.log10( value ) ) ), 7, 129 );
-            const gauge_level_y = 168 - gauge_level_height;
-
-            svgElement.style.setProperty( "--gauge_level_height", gauge_level_height );
-            svgElement.style.setProperty( "--gauge_level_y", gauge_level_y );
+            // Pressure = 10-3:  gauge_level_in_percent = 95%
+            // Pressure = 10-7:  gauge_level_in_percent = 5%
+            const gauge_level_in_percent = clamp( 95 + 22.5 * (3 + Math.log10( value ) ), 0, 100 );
+            svgElement.style.setProperty( "--gauge_level_in_percent", gauge_level_in_percent );
         }
 
         function clamp( num, min, max ) {

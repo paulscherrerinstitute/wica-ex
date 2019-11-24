@@ -26,11 +26,12 @@
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_height', 'gauge_level_y'. -->
+    <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_in_percent'. -->
     <symbol id="my_gauge" viewBox="0 0 100 200">
       <rect x="2" y="12" width="96" height="176" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
-      <rect x="22" width="36" fill="limegreen" style="height: var(--gauge_level_height); y: var(--gauge_level_y)"/>
+      <!-- The calculation has been worked out so that gauge_level_in_percent=5% -> 10-7 and gauge_level_in_percent=95% -> 10-3 -->
+      <rect x="22" width="36" fill="limegreen"  style="height: calc( 2px + var(--gauge_level_in_percent) * 1.36px); y:calc( 167px - var(--gauge_level_in_percent) * 1.36px"/>
       <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
