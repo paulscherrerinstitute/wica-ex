@@ -61,15 +61,15 @@
 
         <!-- Dome Cooling Info Box: Text Values -->
         <div data-wica-channel-name="IKUTK-0101-EM00200:D10_H_D-WIHA" onchange="update_svg_string_value( event, '$DK_PUMP_TEXT' )"></div>
-        <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_LEITWERK_TEXT',  3, true )"></div>
+        <div data-wica-channel-name="IKUTK-0101-EB00400:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_LEITWERK_TEXT',  1, true )"></div>
         <div data-wica-channel-name="IKUTK-0101-EB00803:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_TEMP_VOR_TEXT',  1, true )"></div>
         <div data-wica-channel-name="IKUTK-0101-EB00802:M02_A_D-WIHA" onchange="update_svg_numeric_value( event, '$DK_TEMP_RUCK_TEXT', 1, true )"></div>
 
         <!-- GV1, GV2, GV3 Pressure Gauges: Text Values -->
         <!-- Note: need to request that fata is transferred with high precision because the vacuum values can be as low as 10-8 mbar -->
-        <div data-wica-channel-name="GV1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV1_GAUGE_TEXT', 3, true, true )"></div>
-        <div data-wica-channel-name="GV2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV2_GAUGE_TEXT', 3, true, true )"></div>
-        <div data-wica-channel-name="GV3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV3_GAUGE_TEXT', 3, true, true )"></div>
+        <div data-wica-channel-name="GV1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV1_GAUGE_TEXT', 1, true, true )"></div>
+        <div data-wica-channel-name="GV2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV2_GAUGE_TEXT', 1, true, true )"></div>
+        <div data-wica-channel-name="GV3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GV3_GAUGE_TEXT', 1, true, true )"></div>
 
         <!-- GV1, GV2, GV3 Pressure Gauges: Symbol Levels -->
         <!-- Note: need to request that fata is transferred with high precision because the vacuum values can be as low as 10-8 mbar -->

@@ -3,11 +3,13 @@
 
   <defs>
 
+    <!-- Vacuum Valve Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>/>
     </symbol>
 
+    <!-- Vacuum Pump Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_pump" viewBox="0 0 100 100">
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
@@ -15,6 +17,7 @@
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
+    <!-- Vacuum Turbo Pump Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
@@ -23,10 +26,11 @@
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
+    <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_height', 'gauge_level_y'. -->
     <symbol id="my_gauge" viewBox="0 0 100 200">
       <rect x="2" y="12" width="96" height="176" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
-      <rect x="22" width="36" fill="limegreen" style="height: var(--gauge_level_height); y:var(--gauge_level_y)"/>
+      <rect x="22" width="36" fill="limegreen" style="height: var(--gauge_level_height); y: var(--gauge_level_y)"/>
       <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
       <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
