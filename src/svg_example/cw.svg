@@ -200,7 +200,7 @@
 
     <g id="IonSource">
       <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-      <a href="vacuum_panel.html">
+      <a href="injector2.html" target="_blank">
         <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; Ion Source</text>
       </a>
     </g>
