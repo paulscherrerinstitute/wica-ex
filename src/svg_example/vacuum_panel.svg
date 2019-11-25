@@ -46,27 +46,52 @@
 
     <style>
 
-      .info_box, .nav {
+      .nav_box {
+        fill: lightgray;
+        stroke: darkgray;
+        stroke-width:4;
+        rx: 8
+      }
+
+      .nav_label {
+        font: bold 24px sans-serif;
+        fill: darkblue;
+      }
+
+      .info_box {
          fill: lightgray;
          stroke: darkgray;
          stroke-width:4;
       }
+
       .tube {
          stroke: darkgray;
          stroke-width: 5px;
       }
+
       .label_l {
          font: bold 32px sans-serif;
          fill: darkblue;
       }
+
       .label_m {
         font: bold 24px sans-serif;
         fill: darkblue;
       }
+
       .value {
          font: 24px sans-serif;
          fill: blue;
       }
+
+      /* As SVG does not provide a default visual style for links,
+      it's considered best practice to add some */
+      @namespace svg url(http://www.w3.org/2000/svg);
+
+      svg|a:link {
+        cursor: pointer;
+      }
+
     </style>
 
   </defs>
@@ -105,7 +130,7 @@
     <g id="VVD1 Section">
       <use id= "$VVD1_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
       <text class="label_m" x="550" y="310" text-anchor="middle">VVD1</text>
-      <text id= "$VVD1_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
+      <text id="$VVD1_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
     </g>
 
     <g id="VVD2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
@@ -115,8 +140,10 @@
     </g>
 
     <g id="IonSource">
-      <rect class="nav" x="2" y="300" width="196" height="100"/>
-      <text class="label_l" x="100" y="360" text-anchor="middle">Ion Source</text>
+      <rect class="nav_box" x="2" y="400" width="196" height="50"/>
+      <a href="vacuum_panel.html">
+        <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; Ion Source</text>
+      </a>
     </g>
 
     <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 15)">
@@ -138,8 +165,10 @@
     </g>
 
     <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
-      <rect class="nav" x="2" y="300" width="196" height="100"/>
-      <text class="label_l" x="100" y="360" text-anchor="middle">860 MeV</text>
+      <rect class="nav_box" x="2" y="400" width="196" height="50"/>
+      <a href="vacuum_panel.html">
+        <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 MeV</text>
+      </a>
     </g>
 
     <g id="Dome Cooling" transform="matrix(1, 0, 0, 1, 1000, 450)">
@@ -158,9 +187,9 @@
     <g id="Connecting Lines">
       <line class="tube" x1="350"  y1="350" x2="350"  y2="500"/>
       <line class="tube" x1="750"  y1="350" x2="750"  y2="500"/>
-      <line class="tube" x1="200"  y1="350" x2="500"  y2="350"/>
+      <line class="tube" x1="0"  y1="350" x2="500"  y2="350"/>
       <line class="tube" x1="600"  y1="350" x2="900"  y2="350"/>
-      <line class="tube" x1="1000" y1="350" x2="1300" y2="350"/>
+      <line class="tube" x1="1000" y1="350" x2="1500" y2="350"/>
     </g>
   </g>
 </svg>
