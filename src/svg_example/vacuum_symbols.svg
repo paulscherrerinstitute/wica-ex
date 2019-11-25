@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="100%" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- Vacuum Valve Symbol. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_valve" viewBox="0 0 100 100">
+      <title>valve</title>
+      <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>/>
+    </symbol>
+
+    <!-- Vacuum Pump Symbol. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_pump" viewBox="0 0 100 100">
+      <title>pump</title>
+      <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
+      <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
+      <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Turbo Pump Symbol. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
+      <title>turbo pump</title>
+      <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
+      <circle cx="50" cy="50" r="5" fill="lightgray"/>
+      <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
+      <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_in_percent'. -->
+    <symbol id="my_gauge" viewBox="0 0 100 250">
+      <title>gauge</title>
+      <rect x="2" y="2" width="96" height="196" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
+      <!-- The calculation has been worked out so that gauge_level_in_percent=5% -> 10-7 and gauge_level_in_percent=95% -> 10-3 -->
+      <rect x="22" width="36" fill="limegreen"  style="height: calc( 2px + var(--gauge_level_in_percent) * 1.36px); y:calc( 167px - var(--gauge_level_in_percent) * 1.36px"/>
+      <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="130" x2="65" y2="130" stroke="darkgray" stroke-width="2" />
+      <line x1="60" y1="160" x2="65" y2="160" stroke="darkgray" stroke-width="2" />
+      <text x="68" y="44"  font-size="12">10-3</text>
+      <text x="68" y="74"  font-size="12">10-4</text>
+      <text x="68" y="104" font-size="12">10-5</text>
+      <text x="68" y="134" font-size="12">10-6</text>
+      <text x="68" y="164" font-size="12">10-7</text>
+      <text x="50" y="230" font-size="20" text-anchor="middle">99.8 mBar</text>
+    </symbol>
+
+    <symbol id="ellipse" viewBox="0 0 100 100">
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <ellipse cx="50" cy="50" rx="40" ry="10" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+      <line x1="50" y1="0" x2="50" y2="40" stroke="darkgray" stroke-width="4"/>
+      <line x1="50" y1="60" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="vert_tube" viewBox="0 0 100 100">
+      <title>vertical tube</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="vert_half_tube" viewBox="0 0 100 100">
+      <title>vertical half tube</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="horiz_tube" viewBox="0 0 100 100">
+      <title>horizontal tube</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="t_tube" viewBox="0 0 100 100">
+      <title>T-section tube</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
+      <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="x_tube" viewBox="0 0 100 100">
+      <title>X-section tube</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
+      <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="hemisphere_tube" viewBox="0 0 100 100">
+      <title>hemisphere tube</title>
+      <rect width="100" height="100" fill-opacity="0"/>
+      <path d="M 50 2 C 85 0 109 40 90 73 C 82 87 66 100 50 98" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="value" viewBox="0 0 25 25">
+      <title>value</title>
+      <text font-size="12" fill-opacity="0"/>
+    </symbol>
+
+    <symbol id="label" viewBox="0 0 25 25">
+      <title>label</title>
+      <text font-size="12" fill-opacity="0"/>
+    </symbol>
+
+  </defs>
+</svg>

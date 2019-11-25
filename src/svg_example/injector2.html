@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+
+    <!-- Load the Wica library -->
+    <script src="wica/wica.js" type="module"></script>
+
+    <title>SVG Demo</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            border:0;
+        }
+
+        html {
+            font-family: "Helvetica Neue",sans-serif;
+            font-size: 1.8vmin;
+            background-color: grey;
+            width: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            height: 80%;
+        }
+
+        .hidden {
+           display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="hidden">
+
+        <!-- HIPA Clock -->
+        <div data-wica-channel-name="XHIPA:TIME"  onchange="update_svg_string_value( event, '$TIME_TEXT' )"></div>
+
+        <!-- PIT1 Beamline Section -->
+        <div data-wica-channel-name="PIT1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT1_GAUGE' )"></div>
+        <div data-wica-channel-name="PIT1:HV:2"   onchange="update_svg_component_color( event, '$PIT1_VALVE_HV', 'HV_offen', 'HV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT1:TURBO:2" onchange="update_svg_component_color( event, '$PIT1_PUMP',    'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIT1:PV:2"   onchange="update_svg_component_color( event, '$PIT1_VALVE_PV', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT1:SV:2"   onchange="update_svg_string_value( event, '$PIT1_GAUGE_TEXT' )"></div>
+
+        <!-- PIT2 Beamline Section -->
+        <div data-wica-channel-name="PIT2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT2_GAUGE' )"></div>
+        <div data-wica-channel-name="PIT2:HV:2"   onchange="update_svg_component_color( event, '$PIT2_VALVE_HV', 'HV_offen', 'HV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT2:TURBO:2" onchange="update_svg_component_color( event, '$PIT2_PUMP',    'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIT2:PV:2"   onchange="update_svg_component_color( event, '$PIT2_VALVE_PV', 'PV_offen', 'PV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT2:SV:2"   onchange="update_svg_string_value( event, '$PIT2_GAUGE_TEXT' )"></div>
+
+        <!-- PIK1 Beamline Section -->
+        <div data-wica-channel-name="GI1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI1_GAUGE' )"></div>
+        <div data-wica-channel-name="PIK1:AV:2"    onchange="update_svg_component_color( event, '$PIK1_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIK1:TURBO:2" onchange="update_svg_component_color( event, '$PIK1_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIK1:HV:2"    onchange="update_svg_component_color( event, '$PIK1_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+
+        <!-- PIK2 Beamline Section -->
+        <div data-wica-channel-name="GI2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI2_GAUGE' )"></div>
+        <div data-wica-channel-name="PIK2:AV:2"    onchange="update_svg_component_color( event, '$PIK2_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIK2:TURBO:2" onchange="update_svg_component_color( event, '$PIK2_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIK2:HV:2"    onchange="update_svg_component_color( event, '$PIK2_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+
+        <!-- PIK3 Beamline Section -->
+        <div data-wica-channel-name="GI3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI3_GAUGE' )"></div>
+        <div data-wica-channel-name="PIK3:AV:2"    onchange="update_svg_component_color( event, '$PIK3_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIK3:TURBO:2" onchange="update_svg_component_color( event, '$PIK3_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIK3:HV:2"    onchange="update_svg_component_color( event, '$PIK3_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+
+        <!-- PIK4 Beamline Section -->
+        <div data-wica-channel-name="GI4:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI4_GAUGE' )"></div>
+        <div data-wica-channel-name="PIK4:AV:2"    onchange="update_svg_component_color( event, '$PIK4_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIK4:TURBO:2" onchange="update_svg_component_color( event, '$PIK4_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIK4:HV:2"    onchange="update_svg_component_color( event, '$PIK4_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+
+    </div>
+
+    <object id="svgHostElement" type="image/svg+xml" data="injector2.svg"> </object>
+
+    <script>
+
+        let svgDoc = null;
+
+        function init_svg_document_ref()
+        {
+            if ( svgDoc === null ) {
+                const svgElement = document.getElementById( "svgHostElement" );
+                svgDoc = svgElement.contentDocument;
+            }
+        }
+
+        function update_svg_numeric_value(event, svgEleId, fractionDigits, optUnits = false, optExp = false )
+        {
+            init_svg_document_ref();
+            const targetElement = svgDoc.getElementById( svgEleId );
+            if ( targetElement == null ) {
+                return;
+            }
+            const value = targetElement.textContent = optExp ?
+                event.channelValueLatest.val.toExponential( fractionDigits ):
+                event.channelValueLatest.val.toFixed( fractionDigits );
+
+            const units = optUnits ? event.channelMetadata.egu : "";
+            targetElement.textContent = value + " " + units;
+        }
+
+        function update_svg_string_value(event, svgEleId, optUnits = false )
+        {
+            init_svg_document_ref();
+            const targetElement = svgDoc.getElementById( svgEleId );
+            if ( targetElement == null ) {
+                return;
+            }
+            const units = optUnits ? event.channelMetadata.egu : "";
+            targetElement.textContent = event.channelValueLatest.val + " " + units ;
+        }
+
+        function update_svg_component_color(event, svgElementId, okValue, nokValue )
+        {
+            const errColor = "orange";
+            const nokColor = "red";
+            const okColor = "limegreen";
+
+            init_svg_document_ref();
+            const svgElement = svgDoc.getElementById( svgElementId );
+            if ( svgElement == null ) {
+                return;
+            }
+
+            switch ( event.channelValueLatest.val )
+            {
+                case okValue:
+                    svgElement.style.setProperty( "--component_fill_color", okColor );
+                    break;
+
+                case nokValue:
+                    svgElement.style.setProperty( "--component_fill_color", nokColor );
+                    break;
+
+                default:
+                    svgElement.style.setProperty( "--component_fill_color", errColor );
+                    break;
+            }
+        }
+
+        function update_svg_gauge_level( event, svgElementId )
+        {
+            init_svg_document_ref();
+
+            const svgElement = svgDoc.getElementById( svgElementId );
+            if ( svgElement == null ) {
+                return;
+            }
+
+            const value =  event.channelValueLatest.val;
+            // Calculation is derived as follows:
+            // Pressure = 10-3:  gauge_level_in_percent = 95%
+            // Pressure = 10-7:  gauge_level_in_percent = 5%
+            const gauge_level_in_percent = clamp( 95 + 22.5 * (3 + Math.log10( value ) ), 0, 100 );
+            svgElement.style.setProperty( "--gauge_level_in_percent", gauge_level_in_percent );
+        }
+
+        function clamp( num, min, max ) {
+            return num <= min ? min : num >= max ? max : num;
+        }
+
+    </script>
+
+</body>
+</html>
+
