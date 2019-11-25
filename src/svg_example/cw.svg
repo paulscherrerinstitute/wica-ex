@@ -225,7 +225,7 @@
 
     <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
       <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-      <a href="injector2.html">
+      <a href="injector2.html" target="_blank">
         <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 MeV</text>
       </a>
     </g>
