@@ -5,12 +5,14 @@
 
     <!-- Vacuum Valve Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
+      <title>valve</title>
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>/>
+      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>
     </symbol>
 
     <!-- Vacuum Pump Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_pump" viewBox="0 0 100 100">
+      <title>pump</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
@@ -19,6 +21,7 @@
 
     <!-- Vacuum Turbo Pump Symbol. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
+      <title>turbo pump</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <circle cx="50" cy="50" r="5" fill="lightgray"/>
@@ -28,6 +31,7 @@
 
     <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_in_percent'. -->
     <symbol id="my_gauge" viewBox="0 0 100 200">
+      <title>gauge</title>
       <rect x="2" y="2" width="96" height="196" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
       <!-- The calculation has been worked out so that gauge_level_in_percent=5% -> 10-7 and gauge_level_in_percent=95% -> 10-3 -->
@@ -52,31 +56,53 @@
     </symbol>
 
     <symbol id="vert_tube" viewBox="0 0 100 100">
+      <title>vertical tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="vert_half_tube" viewBox="0 0 100 100">
+      <title>vertical half tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="horiz_tube" viewBox="0 0 100 100">
+      <title>horizontal tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="t_tube" viewBox="0 0 100 100">
+      <title>T-section tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <symbol id="x_tube" viewBox="0 0 100 100">
+      <title>X-section tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
+
+    <symbol id="hemisphere_tube" viewBox="0 0 100 100">
+      <title>hemisphere tube</title>
+      <rect width="100" height="100" fill-opacity="0"/>
+      <path d="M 50 2 C 85 0 109 40 90 73 C 82 87 66 100 50 98" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <symbol id="value" viewBox="0 0 25 25">
+      <title>value</title>
+      <text font-size="12" fill-opacity="0"/>
+    </symbol>
+
+    <symbol id="label" viewBox="0 0 25 25">
+      <title>label</title>
+      <text font-size="12" fill-opacity="0"/>
+    </symbol>
+
     <style>
 
       .nav_box {
@@ -179,22 +205,22 @@
       </a>
     </g>
 
-    <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 15)">
-      <use id="$GV1_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
-      <text class="label_m" x="350" y="75" text-anchor="middle">GV1</text>
-      <text id="$GV1_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
+    <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <text class="label_m" x="350" y="85" text-anchor="middle">GV1</text>
+      <use id="$GV1_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
+      <text id="$GV1_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
     </g>
 
-    <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 15)">
-      <use id="$GV2_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
-      <text class="label_m" x="350" y="75"  text-anchor="middle">GV2</text>
-      <text id="$GV2_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
+    <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 0)">
+      <text class="label_m" x="350" y="85"  text-anchor="middle">GV2</text>
+      <use id="$GV2_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
+      <text id="$GV2_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
     </g>
 
-    <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 15)">
-      <use id="$GV3_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 75)" href="#my_gauge"/>
-      <text class="label_m" x="350" y="75"  text-anchor="middle">GV3</text>
-      <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="295" text-anchor="middle">9.9e-9</text>
+    <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 0)">
+      <text class="label_m" x="350" y="85"  text-anchor="middle">GV3</text>
+      <use id="$GV3_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
+      <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
     </g>
 
     <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">

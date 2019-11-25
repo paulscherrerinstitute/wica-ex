@@ -7,7 +7,7 @@
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
       <title>valve</title>
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>/>
+      <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>
     </symbol>
 
     <!-- Vacuum Pump Symbol. Supported vars: 'component_fill_color'. -->

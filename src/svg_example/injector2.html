@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Load the Wica library -->
     <script src="wica/wica.js" type="module"></script>
@@ -46,42 +47,49 @@
         <div data-wica-channel-name="XHIPA:TIME"  onchange="update_svg_string_value( event, '$TIME_TEXT' )"></div>
 
         <!-- PIT1 Beamline Section -->
-        <div data-wica-channel-name="PIT1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT1_GAUGE' )"></div>
-        <div data-wica-channel-name="PIT1:HV:2"   onchange="update_svg_component_color( event, '$PIT1_VALVE_HV', 'HV_offen', 'HV_geschlossen' )"></div>
-        <div data-wica-channel-name="PIT1:TURBO:2" onchange="update_svg_component_color( event, '$PIT1_PUMP',    'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
-        <div data-wica-channel-name="PIT1:PV:2"   onchange="update_svg_component_color( event, '$PIT1_VALVE_PV', 'PV_offen', 'PV_geschlossen' )"></div>
-        <div data-wica-channel-name="PIT1:SV:2"   onchange="update_svg_string_value( event, '$PIT1_GAUGE_TEXT' )"></div>
+        <div data-wica-channel-name="PIT1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT1_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="PIT1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$PIT1_GAUGE_TEXT', 1, true, true )"></div>
+        <div data-wica-channel-name="PIT1:HV:2"    onchange="update_svg_component_color( event, '$PIT1_VALVE_HV', 'HV_offen', 'HV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT1:TURBO:2" onchange="update_svg_component_color( event, '$PIT1_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIT1:PV:2"    onchange="update_svg_component_color( event, '$PIT1_VALVE_PV', 'PV_offen', 'PV_geschlossen' )"></div>
+
 
         <!-- PIT2 Beamline Section -->
-        <div data-wica-channel-name="PIT2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT2_GAUGE' )"></div>
-        <div data-wica-channel-name="PIT2:HV:2"   onchange="update_svg_component_color( event, '$PIT2_VALVE_HV', 'HV_offen', 'HV_geschlossen' )"></div>
-        <div data-wica-channel-name="PIT2:TURBO:2" onchange="update_svg_component_color( event, '$PIT2_PUMP',    'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
-        <div data-wica-channel-name="PIT2:PV:2"   onchange="update_svg_component_color( event, '$PIT2_VALVE_PV', 'PV_offen', 'PV_geschlossen' )"></div>
-        <div data-wica-channel-name="PIT2:SV:2"   onchange="update_svg_string_value( event, '$PIT2_GAUGE_TEXT' )"></div>
+        <div data-wica-channel-name="PIT2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$PIT2_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="PIT2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$PIT2_GAUGE_TEXT', 1, true, true )"></div>
+        <div data-wica-channel-name="PIT2:HV:2"    onchange="update_svg_component_color( event, '$PIT2_VALVE_HV',  'HV_offen', 'HV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT2:TURBO:2" onchange="update_svg_component_color( event, '$PIT2_PUMP',      'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+        <div data-wica-channel-name="PIT2:PV:2"    onchange="update_svg_component_color( event, '$PIT2_VALVE_PV',  'PV_offen', 'PV_geschlossen' )"></div>
 
         <!-- PIK1 Beamline Section -->
-        <div data-wica-channel-name="GI1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI1_GAUGE' )"></div>
+        <div data-wica-channel-name="GI1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI1_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="GI1:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GI1_GAUGE_TEXT', 1, true, true )"></div>
         <div data-wica-channel-name="PIK1:AV:2"    onchange="update_svg_component_color( event, '$PIK1_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
         <div data-wica-channel-name="PIK1:TURBO:2" onchange="update_svg_component_color( event, '$PIK1_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
         <div data-wica-channel-name="PIK1:HV:2"    onchange="update_svg_component_color( event, '$PIK1_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+        <div data-wica-channel-name="PIT2:IST:2"      onchange="update_svg_string_value( event, '$PIT2_GAUGE_TEXT', 1, true, true )"></div>
 
         <!-- PIK2 Beamline Section -->
-        <div data-wica-channel-name="GI2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI2_GAUGE' )"></div>
+        <div data-wica-channel-name="GI2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI2_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="GI2:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GI2_GAUGE_TEXT', 1, true, true )"></div>
         <div data-wica-channel-name="PIK2:AV:2"    onchange="update_svg_component_color( event, '$PIK2_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
         <div data-wica-channel-name="PIK2:TURBO:2" onchange="update_svg_component_color( event, '$PIK2_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
         <div data-wica-channel-name="PIK2:HV:2"    onchange="update_svg_component_color( event, '$PIK2_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
 
         <!-- PIK3 Beamline Section -->
-        <div data-wica-channel-name="GI3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI3_GAUGE' )"></div>
+        <div data-wica-channel-name="GI3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI3_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="GI3:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GI3_GAUGE_TEXT', 1, true, true )"></div>
         <div data-wica-channel-name="PIK3:AV:2"    onchange="update_svg_component_color( event, '$PIK3_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
         <div data-wica-channel-name="PIK3:TURBO:2" onchange="update_svg_component_color( event, '$PIK3_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
         <div data-wica-channel-name="PIK3:HV:2"    onchange="update_svg_component_color( event, '$PIK3_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
 
         <!-- PIK4 Beamline Section -->
-        <div data-wica-channel-name="GI4:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI4_GAUGE' )"></div>
+        <div data-wica-channel-name="GI4:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,'$GI4_GAUGE_LEVEL' )"></div>
+        <div data-wica-channel-name="GI4:IST:2" data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event, '$GI4_GAUGE_TEXT', 1, true, true )"></div>
         <div data-wica-channel-name="PIK4:AV:2"    onchange="update_svg_component_color( event, '$PIK4_VALVE_AV', 'AV_offen', 'AV_geschlossen' )"></div>
         <div data-wica-channel-name="PIK4:TURBO:2" onchange="update_svg_component_color( event, '$PIK4_PUMP',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
         <div data-wica-channel-name="PIK4:HV:2"    onchange="update_svg_component_color( event, '$PIK4_VALVE_KV', 'HV_offen', 'HV_geschlossen' )"></div>
+
 
     </div>
 
@@ -99,7 +107,7 @@
             }
         }
 
-        function update_svg_numeric_value(event, svgEleId, fractionDigits, optUnits = false, optExp = false )
+        function update_svg_numeric_value( event, svgEleId, fractionDigits, optUnits = false, optExp = false )
         {
             init_svg_document_ref();
             const targetElement = svgDoc.getElementById( svgEleId );
