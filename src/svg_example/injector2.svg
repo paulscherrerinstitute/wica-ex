@@ -266,14 +266,14 @@
 
   <g id="860 Vakuum" transform="matrix(1, 0, 0, 1, 100, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-    <a href="cw.html" target="_blank">
+    <a href="cw.html" target="_top">
       <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; 860 Vakuum</text>
     </a>
   </g>
 
   <g id="IW2 Vakuum" transform="matrix(1, 0, 0, 1, 1400, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-    <a href="cw.html" target="_blank">
+    <a href="cw.html" target="_top">
       <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; IW2 Vakuum</text>
     </a>
   </g>
