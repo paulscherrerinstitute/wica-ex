@@ -1,1 +1,1 @@
-[src/svg_example/xx]
+![My SVG](./src/svg_example/simon.svg)
