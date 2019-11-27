@@ -20,7 +20,7 @@
     </symbol>
 
     <!-- Vacuum Turbo Pump. Supported vars: 'component_fill_color'. -->
-    <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
+    <symbol id="vacuum_pump_turbo" viewBox="0 0 100 100">
       <title>vacuum pump: turbo</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
@@ -30,7 +30,7 @@
     </symbol>
 
     <!-- Vacuum Cryo Pump. Supported vars: 'component_fill_color'. -->
-    <symbol id="vacuum_cryo_pump" viewBox="0 0 100 100">
+    <symbol id="vacuum_pump_cryo" viewBox="0 0 100 100">
       <title>vacuum pump: cryo</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
@@ -76,28 +76,28 @@
     </symbol>
 
     <!-- Vacuum Tube: Vertical -->
-    <symbol id="vert_tube" viewBox="0 0 100 100">
+    <symbol id="vacuum_tube_vert" viewBox="0 0 100 100">
       <title>vacuum tube: vertical tube</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <!-- Vacuum Tube: Vertical 1/2 height -->
-    <symbol id="vert_half_tube" viewBox="0 0 100 100">
+    <symbol id="vacuum_tube_vert_half" viewBox="0 0 100 100">
       <title>vacuum tube: vertical half-height</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <!-- Vacuum Tube: Horizontal -->
-    <symbol id="horiz_tube" viewBox="0 0 100 100">
+    <symbol id="vacuum_tube_horiz" viewBox="0 0 100 100">
       <title>vacuum tube: horizontal</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <!-- Vacuum Tube: T-Section -->
-    <symbol id="t_tube" viewBox="0 0 100 100">
+    <symbol id="vacuum_tube_t" viewBox="0 0 100 100">
       <title>vacuum tube: T-section</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
@@ -105,7 +105,7 @@
     </symbol>
 
     <!-- Vacuum Tube: X-Section -->
-    <symbol id="x_tube" viewBox="0 0 100 100">
+    <symbol id="vacuum_tube_x" viewBox="0 0 100 100">
       <title>vacuum tube: X-section</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
@@ -113,7 +113,7 @@
     </symbol>
 
     <!-- Vacuum Tube: Hemispherical -->
-    <symbol id="hemispherical_tube" viewBox="0 0 100 100" overflow="visible">
+    <symbol id="vacuum_tube_h" viewBox="0 0 100 100" overflow="visible">
       <title>vacuum tube: hemispherical</title>
       <rect width="100" height="100" fill-opacity="0" />
       <path d="M 0 0 A 50 50 0 0 1 0 100" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
@@ -192,16 +192,16 @@
   </g>
 
   <g id="PIK1 Section" transform="matrix(1, 0, 0, 1, 100, 50)">
-    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vert_half_tube"/>
+    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vacuum_tube_vert_half"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 100)" id="$PIK1_VALVE_AV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vert_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK1_PUMP" href="#vacuum_cryo_pump"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vacuum_tube_vert"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK1_PUMP" href="#vacuum_pump_cryo"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 500)" id="$PIK1_VALVE_KV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vacuum_tube_vert"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 400)" id="$GI1_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:visible;--gauge_scale_2:none;"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#t_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#vacuum_tube_t"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#vacuum_tube_horiz"/>
     <text id="$GI1_GAUGE_TEXT" class="value" x="200" y="630" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="200" y="390" text-anchor="middle">GI1</text>
     <text class="label_m" x="0" y="160" text-anchor="end">PIK1</text>
@@ -210,16 +210,16 @@
   </g>
 
   <g id="PIK2 Section" transform="matrix(1, 0, 0, 1, 500, 50)">
-    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vert_half_tube"/>
+    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vacuum_tube_vert_half"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 100)" id="$PIK2_VALVE_AV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vert_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK2_PUMP" href="#vacuum_cryo_pump"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vacuum_tube_vert"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK2_PUMP" href="#vacuum_pump_cryo"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 500)" id="$PIK2_VALVE_KV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vacuum_tube_vert"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 400)" id="$GI2_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:visible;--gauge_scale_2:none;"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#t_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#vacuum_tube_t"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#vacuum_tube_horiz"/>
     <text id="$GI2_GAUGE_TEXT" class="value" x="200" y="630" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="200" y="390" text-anchor="middle">GI2</text>
     <text class="label_m" x="0" y="160" text-anchor="end">PIK2</text>
@@ -228,16 +228,16 @@
   </g>
 
   <g id="PIK3 Section" transform="matrix(1, 0, 0, 1, 900, 50)">
-    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vert_half_tube"/>
+    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vacuum_tube_vert_half"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 100)" id="$PIK3_VALVE_AV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vert_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK3_PUMP" href="#vacuum_cryo_pump"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vacuum_tube_vert"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK3_PUMP" href="#vacuum_pump_cryo"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 500)" id="$PIK3_VALVE_KV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vacuum_tube_vert"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 400)" id="$GI3_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:visible;--gauge_scale_2:none;"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#t_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#vacuum_tube_t"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#vacuum_tube_horiz"/>
     <text id="$GI3_GAUGE_TEXT" class="value" x="200" y="630" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="200" y="390" text-anchor="middle">GI3</text>
     <text class="label_m" x="0" y="160" text-anchor="end">PIK3</text>
@@ -246,16 +246,16 @@
   </g>
 
   <g id="PIK4 Section" transform="matrix(1, 0, 0, 1, 1300, 50)">
-    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vert_half_tube"/>
+    <use width="100" height="100" transform="matrix(-1, 0, 0, -1, 100, 100)" style="stroke-linecap: square;" href="#vacuum_tube_vert_half"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 100)" id="$PIK4_VALVE_AV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vert_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK4_PUMP" href="#vacuum_cryo_pump"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 200)" href="#vacuum_tube_vert"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 300)" id="$PIK4_PUMP" href="#vacuum_pump_cryo"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 500)" id="$PIK4_VALVE_KV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 400)" href="#vacuum_tube_vert"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 400)" id="$GI4_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:visible;--gauge_scale_2:none;"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#t_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 600)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 600)" href="#vacuum_tube_t"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" href="#vacuum_tube_horiz"/>
     <text id="$GI4_GAUGE_TEXT" class="value" x="200" y="630" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="200" y="390" text-anchor="middle">GI4</text>
     <text class="label_m" x="0" y="160" text-anchor="end">PIK4</text>
@@ -264,22 +264,22 @@
   </g>
 
   <g id="PIT1 Section" transform="matrix(1, 0, 0, 1, 300, 750)">
-    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 100)" href="#t_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 100)" href="#vacuum_tube_t"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 100)" id="$PIT1_VALVE_HV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 400)" href="#vert_half_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 600)" href="#vert_half_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 450)" href="#ellipse"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 400)" href="#vacuum_tube_vert_half"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 600)" href="#vacuum_tube_vert_half"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 450)" href="#vacuum_buffer"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 300)" id="$PIT1_PUMP" href="#vacuum_pump"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 200)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 200)" href="#vacuum_tube_vert"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" id="$PIT1_VALVE_PV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 700)" href="#t_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 700)" href="#vacuum_tube_t"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 50, 500)" id="$PIT1_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:none;--gauge_scale_2:visible;"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 0)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 0)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 0)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 0)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 0)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 0)" href="#vacuum_tube_horiz"/>
     <text id="$PIT1_GAUGE_TEXT" class="value" x="100" y="730" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="100" y="490" text-anchor="middle">PIT1</text>
     <text class="label_m" x="290" y="160">HV</text>
@@ -287,22 +287,22 @@
   </g>
 
   <g id="PIT2 Section" transform="matrix(1, 0, 0, 1, 700, 750)">
-    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 100)" href="#t_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 100)" href="#vacuum_tube_t"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 100)" id="$PIT2_VALVE_HV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 400)" href="#vert_half_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 600)" href="#vert_half_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 450)" href="#ellipse"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 400)" href="#vacuum_tube_vert_half"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, -1, 200, 600)" href="#vacuum_tube_vert_half"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 450)" href="#vacuum_buffer"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 300)" id="$PIT2_PUMP" href="#vacuum_pump"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 200)" href="#vert_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 200)" href="#vacuum_tube_vert"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 600)" id="$PIT2_VALVE_PV" href="#vacuum_valve"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 700)" href="#t_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 200, 700)" href="#vacuum_tube_t"/>
     <use width="100" height="250" transform="matrix(1, 0, 0, 1, 50, 500)" id="$PIT2_GAUGE_LEVEL" href="#vacuum_gauge" style="--gauge_scale_1:none;--gauge_scale_2:visible; "/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 700)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 0)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 0)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 0)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 700)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 100, 0)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 0, 0)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 0)" href="#vacuum_tube_horiz"/>
     <text id="$PIT2_GAUGE_TEXT" class="value" x="100" y="730" text-anchor="middle">9.9e-9</text>
     <text class="label_m" x="100" y="490" text-anchor="middle">PIT2</text>
     <text class="label_m" x="290" y="160">HV</text>
@@ -310,20 +310,20 @@
   </g>
 
   <g id="Connecting Lines">
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 1450)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 600, 1450)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(2, 0, 0, 1, 100, 750)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 600, 750)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 750)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(5, 0, 0, 1, 1100, 750)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 1600, 700)" href="#hemispherical_tube" overflow="visible"/>
-    <use width="100" height="100" transform="matrix(-1, 0, 0, 1, 100, 700)" href="#hemispherical_tube"/>
-    <use width="100" height="100" transform="matrix(12, 0, 0, 1, 150, 50)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(6, 0, 0, 1, 1000, 1450)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(2, 0, 0, 1, 100, 1450)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 400, 650)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 800, 650)" href="#horiz_tube"/>
-    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 1200, 650)" href="#horiz_tube"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 1450)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 600, 1450)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(2, 0, 0, 1, 100, 750)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 600, 750)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 750)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(5, 0, 0, 1, 1100, 750)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 1600, 700)" href="#vacuum_tube_h"/>
+    <use width="100" height="100" transform="matrix(-1, 0, 0, 1, 100, 700)" href="#vacuum_tube_h"/>
+    <use width="100" height="100" transform="matrix(12, 0, 0, 1, 150, 50)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(6, 0, 0, 1, 1000, 1450)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(2, 0, 0, 1, 100, 1450)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 400, 650)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 800, 650)" href="#vacuum_tube_horiz"/>
+    <use width="100" height="100" transform="matrix(1, 0, 0, 1, 1200, 650)" href="#vacuum_tube_horiz"/>
   </g>
 
   <g id="Cryo Temperatures" transform="matrix(1, 0, 0, 1, 1100, 670)">
