@@ -1,0 +1,58 @@
+/* Declared the fact that this is a SVG stylesheet */
+
+@namespace svg url(http://www.w3.org/2000/svg);
+
+.nav_box {
+    fill: lightgray;
+    stroke: darkgray;
+    stroke-width:4;
+    rx: 8
+}
+
+.nav_label {
+    font: bold 24px sans-serif;
+    fill: darkblue;
+}
+
+.cavity {
+   fill: royalblue;
+   stroke: darkgray;
+   stroke-width:4;
+}
+
+.info_box {
+    fill: lightgray;
+    stroke: darkgray;
+    stroke-width:4;
+}
+
+.tube {
+    stroke: darkgray;
+    stroke-width: 5px;
+}
+
+.banner {
+    font: bold 42px sans-serif;
+    fill: darkblue;
+}
+
+.label_l {
+    font: bold 32px sans-serif;
+    fill: darkblue;
+}
+
+.label_m {
+    font: bold 24px sans-serif;
+    fill: darkblue;
+}
+
+.value {
+    font: 24px sans-serif;
+    fill: blue;
+}
+
+/* As SVG does not provide a default visual style for links, it's considered best practice to add some. */
+/* The namespace prefix is specified explicitly to avoid clashes with the CSS name space. */
+svg|a:link {
+    cursor: pointer;
+}

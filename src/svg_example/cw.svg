@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="vacuum_support.css" ?>
+
 <svg width="100%" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
-
-    <!-- Vacuum Valve Symbol. Supported vars: 'component_fill_color'. -->
+    <!-- Vacuum Valve. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_valve" viewBox="0 0 100 100">
-      <title>valve</title>
+      <title>vacuum valve</title>
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>
     </symbol>
 
-    <!-- Vacuum Pump Symbol. Supported vars: 'component_fill_color'. -->
+    <!-- Vacuum Pump. Supported vars: 'component_fill_color'. -->
     <symbol id="vacuum_pump" viewBox="0 0 100 100">
-      <title>pump</title>
+      <title>vacuum pump</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Turbo Pump Symbol. Supported vars: 'component_fill_color'. -->
-    <symbol id="vacuum_turbo_pump" viewBox="0 0 100 100">
-      <title>turbo pump</title>
+    <!-- Vacuum Turbo Pump. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_pump_turbo" viewBox="0 0 100 100">
+      <title>vacuum pump: turbo</title>
       <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
       <circle cx="50" cy="50" r="5" fill="lightgray"/>
@@ -29,226 +30,195 @@
       <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Pressure Gauge Symbol. Supported vars: 'gauge_level_in_percent'. -->
-    <symbol id="my_gauge" viewBox="0 0 100 200">
-      <title>gauge</title>
-      <rect x="2" y="2" width="96" height="196" fill="lightgray" stroke="darkgray" stroke-width="4"/>
-      <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
-      <!-- The calculation has been worked out so that gauge_level_in_percent=5% -> 10-7 and gauge_level_in_percent=95% -> 10-3 -->
-      <rect x="22" width="36" fill="limegreen"  style="height: calc( 2px + var(--gauge_level_in_percent) * 1.36px); y:calc( 167px - var(--gauge_level_in_percent) * 1.36px"/>
-      <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2" />
-      <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2" />
-      <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2" />
-      <line x1="60" y1="130" x2="65" y2="130" stroke="darkgray" stroke-width="2" />
-      <line x1="60" y1="160" x2="65" y2="160" stroke="darkgray" stroke-width="2" />
-      <text x="68" y="44"  font-size="12">10-3</text>
-      <text x="68" y="74"  font-size="12">10-4</text>
-      <text x="68" y="104" font-size="12">10-5</text>
-      <text x="68" y="134" font-size="12">10-6</text>
-      <text x="68" y="164" font-size="12">10-7</text>
+    <!-- Vacuum Cryo Pump. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_pump_cryo" viewBox="0 0 100 100">
+      <title>vacuum pump: cryo</title>
+      <rect x="2" y="2" width="96" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <circle cx="50" cy="50" r="35" style="fill:var(--component_fill_color)"/>
+      <circle cx="50" cy="50" r="5" fill="lightgray"/>
+      <line x1="45" y1="90" x2="30" y2="10" stroke="lightgray" stroke-width="4"/>
+      <line x1="55" y1="90" x2="70" y2="10" stroke="lightgray" stroke-width="4"/>
+      <circle style="fill: lightgray" cx="50" cy="50" r="10"/>
+      <text x="50" y="54" font-size="13" text-anchor="middle">K</text>
     </symbol>
 
-    <symbol id="ellipse" viewBox="0 0 100 100">
+    <!-- Vacuum Gauge. Supported vars: 'gauge_level_in_percent', 'gauge_scale_1', 'gauge_scale_2'. -->
+    <symbol id="vacuum_gauge" viewBox="0 0 100 250">
+      <title>vacuum gauge</title>
+      <rect x="2" y="2" width="96" height="196" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <rect x="20" y="30" width="40" height="140" fill="lightgray" stroke="darkgray" stroke-width="2"/>
+      <rect x="22" width="36" fill="limegreen" style="height: calc( 2px + var(--gauge_level_in_percent) * 1.36px); y:calc( 167px - var(--gauge_level_in_percent) * 1.36px"/>
+      <line x1="60" y1="40" x2="65" y2="40" stroke="darkgray" stroke-width="2"/>
+      <line x1="60" y1="70" x2="65" y2="70" stroke="darkgray" stroke-width="2"/>
+      <line x1="60" y1="100" x2="65" y2="100" stroke="darkgray" stroke-width="2"/>
+      <line x1="60" y1="130" x2="65" y2="130" stroke="darkgray" stroke-width="2"/>
+      <line x1="60" y1="160" x2="65" y2="160" stroke="darkgray" stroke-width="2"/>
+      <!-- Range 1 Scale -->
+      <text x="68" y="44" font-size="12" style="display:var(--gauge_scale_1)">10-3</text>
+      <text x="68" y="74" font-size="12" style="display:var(--gauge_scale_1)">10-4</text>
+      <text x="68" y="104" font-size="12" style="display:var(--gauge_scale_1)">10-5</text>
+      <text x="68" y="134" font-size="12" style="display:var(--gauge_scale_1)">10-6</text>
+      <text x="68" y="164" font-size="12" style="display:var(--gauge_scale_1)">10-7</text>
+      <!-- Range 2 Scale -->
+      <text x="68" y="44" font-size="12" style="display:var(--gauge_scale_2)">10-1</text>
+      <text x="68" y="74" font-size="12" style="display:var(--gauge_scale_2)">10-2</text>
+      <text x="68" y="104" font-size="12" style="display:var(--gauge_scale_2)">10-3</text>
+      <text x="68" y="134" font-size="12" style="display:var(--gauge_scale_2)">10-4</text>
+      <text x="68" y="164" font-size="12" style="display:var(--gauge_scale_2)">10-5</text>
+    </symbol>
+
+    <!-- Vacuum Buffer -->
+    <symbol id="vacuum_buffer" viewBox="0 0 100 100">
+      <title>vacuum buffer</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <ellipse cx="50" cy="50" rx="40" ry="10" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="40" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="60" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="vert_tube" viewBox="0 0 100 100">
-      <title>vertical tube</title>
+    <!-- Vacuum Tube: Vertical -->
+    <symbol id="vacuum_tube_vert" viewBox="0 0 100 100">
+      <title>vacuum tube: vertical</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="vert_half_tube" viewBox="0 0 100 100">
-      <title>vertical half tube</title>
+    <!-- Vacuum Tube: Vertical 1/2 height -->
+    <symbol id="vacuum_tube_vert_half" viewBox="0 0 100 100">
+      <title>vacuum tube: vertical 1/2</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="horiz_tube" viewBox="0 0 100 100">
-      <title>horizontal tube</title>
+    <!-- Vacuum Tube: Horizontal -->
+    <symbol id="vacuum_tube_horiz" viewBox="0 0 100 100">
+      <title>vacuum tube: horizontal</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="t_tube" viewBox="0 0 100 100">
-      <title>T-section tube</title>
+    <!-- Vacuum Tube: Horizontal 1/2 Width -->
+    <symbol id="vacuum_tube_horiz_half" viewBox="0 0 100 100">
+      <title>vacuum tube: horizontal 1/2</title>
+      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <line x1="0" y1="50" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Tube: T-Section -->
+    <symbol id="vacuum_tube_t" viewBox="0 0 100 100">
+      <title>vacuum tube: T-section</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="x_tube" viewBox="0 0 100 100">
-      <title>X-section tube</title>
+    <!-- Vacuum Tube: X-Section -->
+    <symbol id="vacuum_tube_x" viewBox="0 0 100 100">
+      <title>vacuum tube: X-section</title>
       <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <symbol id="hemisphere_tube" viewBox="0 0 100 100">
-      <title>hemisphere tube</title>
-      <rect width="100" height="100" fill-opacity="0"/>
-      <path d="M 50 2 C 85 0 109 40 90 73 C 82 87 66 100 50 98" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+    <!-- Vacuum Tube: Hemispherical -->
+    <symbol id="vacuum_tube_h" viewBox="0 0 100 100" overflow="visible">
+      <title>vacuum tube: hemisphere</title>
+      <rect width="100" height="100" fill-opacity="0" />
+      <path d="M 0 0 A 50 50 0 0 1 0 100" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
     </symbol>
-
-    <symbol id="value" viewBox="0 0 25 25">
-      <title>value</title>
-      <text font-size="12" fill-opacity="0"/>
-    </symbol>
-
-    <symbol id="label" viewBox="0 0 25 25">
-      <title>label</title>
-      <text font-size="12" fill-opacity="0"/>
-    </symbol>
-
-    <style>
-
-      .nav_box {
-        fill: lightgray;
-        stroke: darkgray;
-        stroke-width:4;
-        rx: 8
-      }
-
-      .nav_label {
-        font: bold 24px sans-serif;
-        fill: darkblue;
-      }
-
-      .info_box {
-         fill: lightgray;
-         stroke: darkgray;
-         stroke-width:4;
-      }
-
-      .tube {
-         stroke: darkgray;
-         stroke-width: 5px;
-      }
-
-      .label_l {
-         font: bold 32px sans-serif;
-         fill: darkblue;
-      }
-
-      .label_m {
-        font: bold 24px sans-serif;
-        fill: darkblue;
-      }
-
-      .value {
-         font: 24px sans-serif;
-         fill: blue;
-      }
-
-      /* As SVG does not provide a default visual style for links,
-      it's considered best practice to add some */
-      @namespace svg url(http://www.w3.org/2000/svg);
-
-      svg|a:link {
-        cursor: pointer;
-      }
-
-    </style>
 
   </defs>
 
-  <g>
-
-    <g id="Header">
-      <text class="label_l" x="750" y="40" text-anchor="middle">CW Vacuum Layout</text>
-      <text id="$TIME_TEXT" class="value" x="1500" y="40" text-anchor="end">2019-11-22 10:54:00</text>
-    </g>
-
-    <g id="PV1 Section">
-      <use id="$PV1_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
-      <use id="$PV1_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
-      <use id="$PV1_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
-      <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
-      <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
-      <text x="235" y="960" class="label_m">PV1</text>
-      <text id="$PV1_TURBO_TEXT" class="value" x="415" y="560">ON</text>
-      <text id="$PV1_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
-      <text id="$PV1_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
-    </g>
-
-    <g id="PV2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
-      <use id="$PV2_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_turbo_pump"/>
-      <use id="$PV2_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
-      <use id="$PV2_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
-      <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
-      <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
-      <text x="235" y="960" class="label_m">PV2</text>
-      <text id="$PV2_TURBO_TEXT" class="value" x="415" y="560">ON</text>
-      <text id="$PV2_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
-      <text id="$PV2_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
-    </g>
-
-    <g id="VVD1 Section">
-      <use id= "$VVD1_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
-      <text class="label_m" x="550" y="310" text-anchor="middle">VVD1</text>
-      <text id="$VVD1_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
-    </g>
-
-    <g id="VVD2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
-      <use id= "$VVD2_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
-      <text class="label_m" x="550" y="310" text-anchor="middle">VVD2</text>
-      <text id= "$VVD2_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
-    </g>
-
-    <g id="IonSource">
-      <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-      <a href="injector2.html" target="_top">
-        <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; Ion Source</text>
-      </a>
-    </g>
-
-    <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 0)">
-      <text class="label_m" x="350" y="85" text-anchor="middle">GV1</text>
-      <use id="$GV1_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
-      <text id="$GV1_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
-    </g>
-
-    <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 0)">
-      <text class="label_m" x="350" y="85"  text-anchor="middle">GV2</text>
-      <use id="$GV2_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
-      <text id="$GV2_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
-    </g>
-
-    <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 0)">
-      <text class="label_m" x="350" y="85"  text-anchor="middle">GV3</text>
-      <use id="$GV3_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#my_gauge"/>
-      <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="330" text-anchor="middle">9.9e-9</text>
-    </g>
-
-    <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
-      <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-      <a href="injector2.html" target="_top">
-        <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 MeV</text>
-      </a>
-    </g>
-
-    <g id="Dome Cooling" transform="matrix(1, 0, 0, 1, 1000, 450)">
-      <rect class="info_box" x="2" y="250" width="496" height="300"/>
-      <text class="label_l" x="250" y="290" text-anchor="middle">Dome Cooling</text>
-      <text class="label_m" x="250" y="350" text-anchor="end">Pump</text>
-      <text class="label_m" x="250" y="400" text-anchor="end">Leitwerk</text>
-      <text class="label_m" x="250" y="450" text-anchor="end">Temp Vorlauf</text>
-      <text class="label_m" x="250" y="500" text-anchor="end">Temp Rucklauf</text>
-      <text id= "$DK_PUMP_TEXT" class="value" x="265" y="350">UNKNOWN</text>
-      <text id= "$DK_LEITWERK_TEXT" class="value" x="265" y="400">9.999 uS/cm</text>
-      <text id= "$DK_TEMP_VOR_TEXT" class="value" x="265" y="450">99.9 degC</text>
-      <text id= "$DK_TEMP_RUCK_TEXT" class="value" x="265" y="500">99.9 degC</text>
-    </g>
-
-    <g id="Connecting Lines">
-      <line class="tube" x1="350"  y1="350" x2="350"  y2="500"/>
-      <line class="tube" x1="750"  y1="350" x2="750"  y2="500"/>
-      <line class="tube" x1="0"  y1="350" x2="500"  y2="350"/>
-      <line class="tube" x1="600"  y1="350" x2="900"  y2="350"/>
-      <line class="tube" x1="1000" y1="350" x2="1500" y2="350"/>
-    </g>
+  <g id="Header">
+    <text class="banner" x="750" y="60" text-anchor="middle">CW Vacuum Layout</text>
+    <text id="$TIME_TEXT" class="value" x="1500" y="60" text-anchor="end">2019-11-22 10:54:00</text>
   </g>
+
+  <g id="PV1 Section">
+    <use id="$PV1_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_pump_turbo"/>
+    <use id="$PV1_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
+    <use id="$PV1_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
+    <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
+    <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
+    <text x="235" y="960" class="label_m">PV1</text>
+    <text id="$PV1_TURBO_TEXT" class="value" x="415" y="560">ON</text>
+    <text id="$PV1_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
+    <text id="$PV1_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
+  </g>
+
+  <g id="PV2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
+    <use id="$PV2_TURBO_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 500)" href="#vacuum_pump_turbo"/>
+    <use id="$PV2_VALVE_SYMBOL" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 700)" href="#vacuum_valve"/>
+    <use id="$PV2_PUMP_SYMBOL"  width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 900)" href="#vacuum_pump"/>
+    <line class="tube" x1="350" y1="600" x2="350" y2="700"/>
+    <line class="tube"  x1="350" y1="800" x2="350" y2="900"/>
+    <text x="235" y="960" class="label_m">PV2</text>
+    <text id="$PV2_TURBO_TEXT" class="value" x="415" y="560">ON</text>
+    <text id="$PV2_VALVE_TEXT" class="value" x="400" y="760">OPEN</text>
+    <text id="$PV2_PUMP_TEXT"  class="value" x="415" y="960">ON</text>
+  </g>
+
+  <g id="VVD1 Section">
+    <use id= "$VVD1_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
+    <text class="label_m" x="550" y="310" text-anchor="middle">VVD1</text>
+    <text id="$VVD1_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
+  </g>
+
+  <g id="VVD2 Section" transform="matrix(1, 0, 0, 1, 400, 0)">
+    <use id= "$VVD2_VALVE_SYMBOL" width="100" height="100" transform="matrix(0, 1, -1, 0, 600, 300)" href="#vacuum_valve"/>
+    <text class="label_m" x="550" y="310" text-anchor="middle">VVD2</text>
+    <text id= "$VVD2_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
+  </g>
+
+  <g id="IonSource">
+    <rect class="cavity" x="2" y="290" width="150" height="120"/>
+    <text class="label_l" x="75" y="360" text-anchor="middle">IQ</text>
+  </g>
+
+  <g id="Gauge GV1" transform="matrix(1, 0, 0, 1, 0, 40)">
+    <text class="label_m" x="350" y="85" text-anchor="middle">GV1</text>
+    <use id="$GV1_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#vacuum_gauge"/>
+    <text id="$GV1_GAUGE_TEXT" class="value" x="350" y="290" text-anchor="middle">9.9e-9</text>
+  </g>
+
+  <g id="Gauge GV2" transform="matrix(1, 0, 0, 1, 400, 40)">
+    <text class="label_m" x="350" y="85"  text-anchor="middle">GV2</text>
+    <use id="$GV2_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#vacuum_gauge"/>
+    <text id="$GV2_GAUGE_TEXT" class="value" x="350" y="290" text-anchor="middle">9.9e-9</text>
+  </g>
+
+  <g id="Gauge GV3" transform="matrix(1, 0, 0, 1, 800, 40)">
+    <text class="label_m" x="350" y="85"  text-anchor="middle">GV3</text>
+    <use id="$GV3_GAUGE_SYMBOL" width="100" height="200" transform="matrix(1, 0, 0, 1, 300, 100)" href="#vacuum_gauge"/>
+    <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="290" text-anchor="middle">9.9e-9</text>
+  </g>
+
+  <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
+    <rect class="nav_box" x="2" y="400" width="196" height="50"/>
+    <a href="injector2.html" target="_top">
+      <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 MeV</text>
+    </a>
+  </g>
+
+  <g id="Dome Cooling" transform="matrix(1, 0, 0, 1, 1000, 450)">
+    <rect class="info_box" x="2" y="250" width="496" height="300"/>
+    <text class="label_l" x="250" y="290" text-anchor="middle">Dome Cooling</text>
+    <text class="label_m" x="250" y="350" text-anchor="end">Pump</text>
+    <text class="label_m" x="250" y="400" text-anchor="end">Leitwerk</text>
+    <text class="label_m" x="250" y="450" text-anchor="end">Temp Vorlauf</text>
+    <text class="label_m" x="250" y="500" text-anchor="end">Temp Rucklauf</text>
+    <text id="$DK_PUMP_TEXT" class="value" x="265" y="350">UNKNOWN</text>
+    <text id="$DK_LEITWERK_TEXT" class="value" x="265" y="400">9.999 uS/cm</text>
+    <text id="$DK_TEMP_VOR_TEXT" class="value" x="265" y="450">99.9 degC</text>
+    <text id="$DK_TEMP_RUCK_TEXT" class="value" x="265" y="500">99.9 degC</text>
+  </g>
+
+  <g id="Connecting Lines">
+    <line class="tube" x1="350"  y1="350" x2="350"  y2="500"/>
+    <line class="tube" x1="750"  y1="350" x2="750"  y2="500"/>
+    <line class="tube" x1="155"  y1="350" x2="500"  y2="350"/>
+    <line class="tube" x1="600"  y1="350" x2="900"  y2="350"/>
+    <line class="tube" x1="1000" y1="350" x2="1500" y2="350"/>
+  </g>
+
 </svg>
