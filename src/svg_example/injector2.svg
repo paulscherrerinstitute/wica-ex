@@ -161,17 +161,17 @@
     <text id= "$MXC1_CURRENT_TEXT" class="value" x="250" y="550">99.9 uA</text>
   </g>
 
-  <g id="860keV Schematic Link" transform="matrix(1, 0, 0, 1, 100, 1000)">
+  <g id="860KeV Schematic Link" transform="matrix(1, 0, 0, 1, 100, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-    <a href="cw.html" target="_top">
-      <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; 860 Vakuum</text>
+    <a href="860KeV.html" target="_top">
+      <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; 860 KeV</text>
     </a>
   </g>
 
   <g id="IW2 Schematic Link" transform="matrix(1, 0, 0, 1, 1400, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
     <a href="cw.html" target="_top">
-      <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; IW2 Vakuum</text>
+      <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; IW2</text>
     </a>
   </g>
 

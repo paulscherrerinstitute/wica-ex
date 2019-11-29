@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vacuum_support.js"></script>
+    <script src="../wica/wica.js" type="module"></script>
+
+    <title>SVG Demo</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            border:0;
+        }
+
+        html {
+            background-color: grey;
+            width: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            margin: auto;
+            width: 95%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="hidden">
+
+    <!-- HIPA Clock -->
+    <div data-wica-channel-name="XHIPA:TIME"  onchange="update_svg_string_value( event, '$TIME_TEXT' )"></div>
+
+    <!-- Block 0 Section -->
+    <div data-wica-channel-name="PWK0:TV:2"    onchange="update_svg_component_color( event, '$PWK0_VALVE_TV',       'TV_offen',            'TV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWT0:HV:2"    onchange="update_svg_component_color( event, '$PWT0_VALVE_HV_LEFT',  'HV_offen',            'HV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWT0:HV:2"    onchange="update_svg_component_color( event, '$PWT0_VALVE_HV_RIGHT', 'HV_offen',            'HV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWT0:VV:2"    onchange="update_svg_component_color( event, '$PWT0_VALVE_VV',       'VV_offen',            'VV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWK0:HV:2"    onchange="update_svg_component_color( event, '$PWK0_VALVE_HV',       'HV_offen',            'HV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWK0:RV:2"    onchange="update_svg_component_color( event, '$PWK0_VALVE_RV',       'RV_offen',            'RV_geschlossen'      )"></div>
+    <div data-wica-channel-name="PWT0:TURBO:2" onchange="update_svg_component_color( event, '$PWT0_PUMP_TURBO',     'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+    <div data-wica-channel-name="PWK0:TURBO:2" onchange="update_svg_component_color( event, '$PWK0_PUMP_CRYO',      'TURBO_eingeschaltet', 'TURBO_ausgeschaltet' )"></div>
+    <div data-wica-channel-name="PWK0:VP:2"    onchange="update_svg_component_color( event, '$PWK0_PUMP_VP',        'VP_ON',               'VP_OFF'              )"></div>
+
+    <div data-wica-channel-name="GW0:IST:2"    data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,    '$GW0_GAUGE_LEVEL',     true          )"></div>
+    <div data-wica-channel-name="PWT0:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,    '$PWT0_GAUGE_GP_LEVEL', false         )"></div>
+    <div data-wica-channel-name="PWK0:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,    '$PWK0_GAUGE_GK_LEVEL', false         )"></div>
+    <div data-wica-channel-name="PWK0:IST1:2"  data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,    '$PWK0_GAUGE_GV_LEVEL', false         )"></div>
+    <div data-wica-channel-name="GW0:IST:2"    data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,  '$GW0_GAUGE_VALUE', 1,  true, true    )"></div>
+    <div data-wica-channel-name="PWT0:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,  '$PWT0_GAUGE_GP_VALUE', 1, true, true )"></div>
+    <div data-wica-channel-name="PWK0:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,  '$PWK0_GAUGE_GK_VALUE', 1, true, true )"></div>
+    <div data-wica-channel-name="PWK0:IST1:2"  data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,  '$PWK0_GAUGE_GV_VALUE', 1, true, true )"></div>
+
+    <!-- Block 1 Section -->
+    <div data-wica-channel-name="VWD1:SV:2"   onchange="update_svg_component_color( event, '$VWD1_VALVE',     'SV_OPEN',             'SV_CLOSED'                        )"></div>
+    <div data-wica-channel-name="PW1:HV:2"    onchange="update_svg_component_color( event, '$PW1_VALVE_HV',   'HV_offen',            'HV_geschlossen'                   )"></div>
+    <div data-wica-channel-name="PW1:PV:2"    onchange="update_svg_component_color( event, '$PW1_VALVE_PV',   'PV_offen',            'PV_geschlossen'                   )"></div>
+    <div data-wica-channel-name="PW1:TURBO:2" onchange="update_svg_component_color( event, '$PW1_PUMP_TURBO', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet'              )"></div>
+    <div data-wica-channel-name="GW1:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,     '$GW1_GAUGE_LEVEL', true           )"></div>
+    <div data-wica-channel-name="PW1:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,     '$PW1_GAUGE_LEVEL', false          )"></div>
+    <div data-wica-channel-name="GW1:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,   '$GW1_GAUGE_VALUE', 1, true, true  )"></div>
+    <div data-wica-channel-name="PW1:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,   '$PW1_GAUGE_VALUE', 1, true, true  )"></div>
+
+    <!-- Block 2 Section -->
+    <div data-wica-channel-name="VWD2:SVB:2"  onchange="update_svg_component_color( event, '$VWD2_VALVE_B',   'SVB_OPEN',            'SVB_CLOSED'                       )"></div>
+    <div data-wica-channel-name="VWD2:SV:2"   onchange="update_svg_component_color( event, '$VWD2_VALVE',     'SV_OPEN',             'SV_CLOSED'                        )"></div>
+    <div data-wica-channel-name="PW2:HV:2"    onchange="update_svg_component_color( event, '$PW2_VALVE_HV',   'HV_offen',            'HV_geschlossen'                   )"></div>
+    <div data-wica-channel-name="PW2:PV:2"    onchange="update_svg_component_color( event, '$PW2_VALVE_PV',   'PV_offen',            'PV_geschlossen'                   )"></div>
+    <div data-wica-channel-name="PW2:TURBO:2" onchange="update_svg_component_color( event, '$PW2_PUMP_TURBO', 'TURBO_eingeschaltet', 'TURBO_ausgeschaltet'              )"></div>
+    <div data-wica-channel-name="GW2:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,     '$GW2_GAUGE_LEVEL', true           )"></div>
+    <div data-wica-channel-name="PW2:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,     '$PW2_GAUGE_LEVEL', false          )"></div>
+    <div data-wica-channel-name="GW2:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,   '$GW2_GAUGE_VALUE', 1, true, true  )"></div>
+    <div data-wica-channel-name="PW2:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,   '$PW2_GAUGE_VALUE', 1, true, true  )"></div>
+
+    <!-- Block 3 Section -->
+    <div data-wica-channel-name="VWD3:SVB:2"  onchange="update_svg_component_color( event, '$VWD3_VALVE_B',   'SVB_OPEN',             'SVB_CLOSED'                      )"></div>
+    <div data-wica-channel-name="VWD3:SV:2"   onchange="update_svg_component_color( event, '$VWD3_VALVE',     'SV_OPEN',              'SV_CLOSED'                       )"></div>
+    <div data-wica-channel-name="PW3:HV:2"    onchange="update_svg_component_color( event, '$PW3_VALVE_HV',   'HV_offen',             'HV_geschlossen'                  )"></div>
+    <div data-wica-channel-name="PW3:PV:2"    onchange="update_svg_component_color( event, '$PW3_VALVE_PV',   'PV_offen',             'PV_geschlossen'                  )"></div>
+    <div data-wica-channel-name="PW3:TURBO:2" onchange="update_svg_component_color( event, '$PW3_PUMP_TURBO', 'TURBO_eingeschaltet',  'TURBO_ausgeschaltet'             )"></div>
+    <div data-wica-channel-name="GW3:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,      '$GW3_GAUGE_LEVEL', true          )"></div>
+    <div data-wica-channel-name="PW3:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,      '$PW3_GAUGE_LEVEL', false         )"></div>
+    <div data-wica-channel-name="GW3:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,    '$GW3_GAUGE_VALUE', 1, true, true )"></div>
+    <div data-wica-channel-name="PW3:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,    '$PW3_GAUGE_VALUE', 1, true, true )"></div>
+
+    <!-- Block 4 Section -->
+    <div data-wica-channel-name="VWD4:SV:2"   onchange="update_svg_component_color( event, '$VWD4_VALVE',     'SV_OPEN',               'SV_CLOSED'                       )"></div>
+    <div data-wica-channel-name="PW4:HV:2"    onchange="update_svg_component_color( event, '$PW4_VALVE_HV',   'HV_offen',              'HV_geschlossen'                  )"></div>
+    <div data-wica-channel-name="PW4:PV:2"    onchange="update_svg_component_color( event, '$PW4_VALVE_PV',   'PV_offen',              'PV_geschlossen'                  )"></div>
+    <div data-wica-channel-name="PW4:TURBO:2" onchange="update_svg_component_color( event, '$PW4_PUMP_TURBO', 'TURBO_eingeschaltet',   'TURBO_ausgeschaltet'             )"></div>
+    <div data-wica-channel-name="GW4:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,       '$GW4_GAUGE_LEVEL', true          )"></div>
+    <div data-wica-channel-name="PW4:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_gauge_level( event,       '$PW4_GAUGE_LEVEL', false         )"></div>
+    <div data-wica-channel-name="GW4:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,     '$GW4_GAUGE_VALUE', 1, true, true )"></div>
+    <div data-wica-channel-name="PW4:IST:2"   data-wica-channel-props='{ "prec" : 12 }' onchange="update_svg_numeric_value( event,     '$PW4_GAUGE_VALUE', 1, true, true )"></div>
+</div>
+
+<object id="svgHostElement" type="image/svg+xml" data="860KeV.svg?refresh"> </object>
+
+</body>
+</html>
+

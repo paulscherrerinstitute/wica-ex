@@ -9,6 +9,7 @@
     <!-- Vacuum Styles Will Be Inserted Here -->
   </style>
 
+
   <g id="Header">
     <text class="banner" x="1400" y="60" text-anchor="middle" >860keV Vacuum Layout</text>
     <text id="$TIME_TEXT" class="value" x="2750" y="60" text-anchor="end" >2019-11-22 10:54:00</text>
@@ -47,24 +48,24 @@
     <text class="label_l" x="400" y="260" text-anchor="middle">Beschleunigungsrohr</text>
   </g>
 
-  <g id="Left_Block" transform="matrix(1, 0, 0, 1, -100, 0)">
-    <use id="$PWKO_TV" width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 650)" href="#vacuum_valve_horiz"/>
-    <use id="$PWTO_HV_LEFT" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 550)" href="#vacuum_valve_vert"/>
-    <use id="$PWTO_HV_RIGHT" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 550)" href="#vacuum_valve_vert"/>
-    <use id="$PWTO_VV" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 1050)" href="#vacuum_valve_vert"/>
-    <use id="$PWTO_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 750)" href="#vacuum_pump_turbo"/>
-    <use id="$PWKO_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 550)" href="#vacuum_valve_vert"/>
-    <use id="$PWK0_RV" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 1050)" href="#vacuum_valve_vert"/>
-    <use id="$PWKO_CRYO" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 750)" href="#vacuum_pump_cryo"/>
-    <use id="$PWKO_PUMP" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 1300)" href="#vacuum_pump"/>
-    <use id="$PWTO_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 300, 950)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PWTO_VALUE" class="value" x="350" y="1180" text-anchor="middle" >9.9e-9</text>
-    <use id="$PWKO_UPPER_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 700, 950)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PWKO_UPPER_VALUE" class="value" x="750" y="1180" text-anchor="middle" >9.9e-9</text>
-    <use id="$PWKO_LOWER_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 700, 1300)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PWKO_LOWER_VALUE" class="value" x="750" y="1530" text-anchor="middle" >9.9e-9</text>
-    <use id="$GW0_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 900, 150)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$GW0_VALUE" class="value" x="950" y="385" text-anchor="middle" >9.9e-9</text>
+  <g id="Block 0" transform="matrix(1, 0, 0, 1, -100, 0)">
+    <use id="$PWK0_VALVE_TV" width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 650)" href="#vacuum_valve_horiz"/>
+    <use id="$PWT0_VALVE_HV_LEFT" width="100" height="100" transform="matrix(1, 0, 0, 1, 300, 550)" href="#vacuum_valve_vert"/>
+    <use id="$PWT0_VALVE_HV_RIGHT" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 550)" href="#vacuum_valve_vert"/>
+    <use id="$PWT0_VALVE_VV" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 1050)" href="#vacuum_valve_vert"/>
+    <use id="$PWK0_VALVE_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 550)" href="#vacuum_valve_vert"/>
+    <use id="$PWK0_VALVE_RV" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 1050)" href="#vacuum_valve_vert"/>
+    <use id="$PWT0_PUMP_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 750)" href="#vacuum_pump_turbo"/>
+    <use id="$PWK0_PUMP_CRYO" width="100" height="100" transform="matrix(1, 0, 0, 1, 900, 750)" href="#vacuum_pump_cryo"/>
+    <use id="$PWK0_PUMP_VP" width="100" height="100" transform="matrix(1, 0, 0, 1, 500, 1300)" href="#vacuum_pump"/>
+    <use id="$GW0_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 900, 150)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$PWT0_GAUGE_GP_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 300, 950)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$PWK0_GAUGE_GK_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 700, 950)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$PWK0_GAUGE_GV_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 700, 1300)" style="--gauge_scale_1:none;--gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <text id="$GW0_GAUGE_VALUE" class="value" x="950" y="385" text-anchor="middle" >9.9e-9</text>
+    <text id="$PWT0_GAUGE_GP_VALUE" class="value" x="350" y="1180" text-anchor="middle" >9.9e-9</text>
+    <text id="$PWK0_GAUGE_GK_VALUE" class="value" x="750" y="1180" text-anchor="middle" >9.9e-9</text>
+    <text id="$PWK0_GAUGE_GV_VALUE" class="value" x="750" y="1530" text-anchor="middle" >9.9e-9</text>
     <text class="label_m" x="885" y="810" text-anchor="end" >PWKO</text>
     <text class="label_m" x="950" y="135" text-anchor="middle" >GW0</text>
     <text class="label_m" x="610" y="810">PWTO</text>
@@ -95,15 +96,15 @@
     <use width="100" height="100" transform="matrix(1, 0, 0, 1.5, 500, 1150)" href="#vacuum_tube_vert"/>
   </g>
 
-  <g id="PW1 Section" transform="matrix(1, 0, 0, 1, 850, 100)">
+  <g id="Block 1" transform="matrix(1, 0, 0, 1, 850, 100)">
     <use id="$VWD1_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
-    <use id="$PW1_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
-    <use id="$PW1_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
-    <use id="$PW1_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
-    <use id="$PW1_GAUGE1_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <use id="$PW1_GAUGE2_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PW1_GAUGE1_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
-    <text id="$PW1_GAUGE2_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
+    <use id="$PW1_VALVE_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
+    <use id="$PW1_VALVE_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
+    <use id="$PW1_PUMP_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
+    <use id="$PW1_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$GW1_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:visible; --gauge_scale_2:none;" href="#vacuum_gauge"/>
+    <text id="$PW1_GAUGE_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
+    <text id="$GW1_GAUGE_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
     <text class="label_m" x="400" y="1185" text-anchor="middle" >PW1</text>
     <text class="label_m" x="400" y="35" text-anchor="middle" >GW1</text>
     <text class="label_m" x="440" y="510" >HV</text>
@@ -118,16 +119,16 @@
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 750)" href="#vacuum_tube_vert_upper"/>
   </g>
 
-  <g id="PW2 Section" transform="matrix(1, 0, 0, 1, 1250, 100)">
-    <use id="$VWD2_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 200)" href="#vacuum_valve_horiz"/>
-    <use id="$PW2_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
-    <use id="$PW2_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
-    <use id="$PW2_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
-    <use id="$PW2_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
-    <use id="$PW2_GAUGE1_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <use id="$PW2_GAUGE2_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:none; --gauge_scale_2:visible;"  href="#vacuum_gauge"/>
-    <text id="$PW2_GAUGE1_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
-    <text id="$PW2_GAUGE2_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
+  <g id="Block 2" transform="matrix(1, 0, 0, 1, 1250, 100)">
+    <use id="$VWD2_VALVE_B" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 200)" href="#vacuum_valve_horiz"/>
+    <use id="$VWD2_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
+    <use id="$PW2_VALVE_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
+    <use id="$PW2_VALVE_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
+    <use id="$PW2_PUMP_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
+    <use id="$PW2_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$GW2_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:visible; --gauge_scale_2:none;" href="#vacuum_gauge"/>
+    <text id="$PW2_GAUGE_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
+    <text id="$GW2_GAUGE_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
     <text class="label_m" x="400" y="1185" text-anchor="middle" >PW2</text>
     <text class="label_m" x="400" y="35" text-anchor="middle" >GW2</text>
     <text class="label_m" x="440" y="510" >HV</text>
@@ -149,16 +150,16 @@
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 1100)" href="#vacuum_tube_horiz"/>
   </g>
 
-  <g id="PW3 Section" transform="matrix(1, 0, 0, 1, 1650, 100)">
-    <use id="$VWD3_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 200)" href="#vacuum_valve_horiz"/>
-    <use id="$PW3_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
-    <use id="$PW3_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
-    <use id="$PW3_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
-    <use id="$PW3_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
-    <use id="$PW3_GAUGE1_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <use id="$PW3_GAUGE2_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PW3_GAUGE1_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
-    <text id="$PW3_GAUGE2_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
+  <g id="Block 3" transform="matrix(1, 0, 0, 1, 1650, 100)">
+    <use id="$VWD3_VALVE_B" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 200)" href="#vacuum_valve_horiz"/>
+    <use id="$VWD3_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
+    <use id="$PW3_VALVE_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
+    <use id="$PW3_VALVE_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
+    <use id="$PW3_PUMP_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
+    <use id="$PW3_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$GW3_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:visible; --gauge_scale_2:none;" href="#vacuum_gauge"/>
+    <text id="$PW3_GAUGE_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
+    <text id="$GW3_GAUGE_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
     <text class="label_m" x="400" y="1185" text-anchor="middle" >PW3</text>
     <text class="label_m" x="400" y="35" text-anchor="middle" >GW3</text>
     <text class="label_m" x="440" y="510" >HV</text>
@@ -178,15 +179,15 @@
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 1100)" href="#vacuum_tube_horiz"/>
   </g>
 
-  <g id="PW4 Section" transform="matrix(1, 0, 0, 1, 2050, 100)">
+  <g id="Block 4" transform="matrix(1, 0, 0, 1, 2050, 100)">
     <use id="$VWD4_VALVE" width="100" height="100" transform="matrix(1, 0, 0, 1, 150, 300)" href="#vacuum_valve_horiz"/>
-    <use id="$PW4_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
-    <use id="$PW4_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
-    <use id="$PW4_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
-    <use id="$PW4_GAUGE1_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <use id="$GW4_GAUGE2_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
-    <text id="$PW4_GAUGE1_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
-    <text id="$PW4_GAUGE2_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
+    <use id="$PW4_VALVE_HV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 450)" href="#vacuum_valve_vert"/>
+    <use id="$PW4_VALVE_PV" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 950)" href="#vacuum_valve_vert"/>
+    <use id="$PW4_PUMP_TURBO" width="100" height="100" transform="matrix(1, 0, 0, 1, 350, 650)" href="#vacuum_pump_turbo"/>
+    <use id="$PW4_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 150, 850)" style="--gauge_scale_1:none; --gauge_scale_2:visible;" href="#vacuum_gauge"/>
+    <use id="$GW4_GAUGE_LEVEL" width="100" height="250" transform="matrix(1, 0, 0, 1, 350, 50)" style="--gauge_scale_1:visible; --gauge_scale_2:none;" href="#vacuum_gauge"/>
+    <text id="$PW4_GAUGE_VALUE" class="value" x="200" y="1085" text-anchor="middle" >9.9e-9</text>
+    <text id="$GW4_GAUGE_VALUE" class="value" x="400" y="285" text-anchor="middle" >9.9e-9</text>
     <text class="label_m" x="400" y="1185" text-anchor="middle" >PW4</text>
     <text class="label_m" x="400" y="35" text-anchor="middle" >GW4</text>
     <text class="label_m" x="440" y="510" >HV</text>
