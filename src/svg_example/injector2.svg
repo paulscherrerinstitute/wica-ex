@@ -129,7 +129,7 @@
     <text class="label_m" x="290" y="660">PV</text>
   </g>
 
-  <g id="Connecting Lines">
+  <g id="Miscellaneous Vacuum Pipes">
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 700, 1450)" href="#vacuum_tube_horiz"/>
     <use width="100" height="100" transform="matrix(1, 0, 0, 1, 600, 1450)" href="#vacuum_tube_horiz"/>
     <use width="100" height="100" transform="matrix(2, 0, 0, 1, 100, 750)" href="#vacuum_tube_horiz"/>
@@ -161,14 +161,14 @@
     <text id= "$MXC1_CURRENT_TEXT" class="value" x="250" y="550">99.9 uA</text>
   </g>
 
-  <g id="860 Vakuum" transform="matrix(1, 0, 0, 1, 100, 1000)">
+  <g id="860keV Schematic Link" transform="matrix(1, 0, 0, 1, 100, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
     <a href="cw.html" target="_top">
       <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; 860 Vakuum</text>
     </a>
   </g>
 
-  <g id="IW2 Vakuum" transform="matrix(1, 0, 0, 1, 1400, 1000)">
+  <g id="IW2 Schematic Link" transform="matrix(1, 0, 0, 1, 1400, 1000)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
     <a href="cw.html" target="_top">
       <text class="nav_label" x="100" y="432" text-anchor="middle">&gt;&gt; IW2 Vakuum</text>

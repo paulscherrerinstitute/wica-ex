@@ -50,7 +50,7 @@
     <text id= "$VVD2_VALVE_TEXT" class="value" x="550" y="410" text-anchor="middle">OPEN</text>
   </g>
 
-  <g id="IonSource">
+  <g id="Ion Source">
     <rect class="cavity" x="2" y="290" width="150" height="120"/>
     <text class="label_l" x="75" y="360" text-anchor="middle">IQ</text>
   </g>
@@ -73,10 +73,10 @@
     <text id="$GV3_GAUGE_TEXT" class="value" x="350" y="290" text-anchor="middle">9.9e-9</text>
   </g>
 
-  <g id="860MeV" transform="matrix(1, 0, 0, 1, 1300, 0)">
+  <g id="860keV Schematic Link" transform="matrix(1, 0, 0, 1, 1300, 0)">
     <rect class="nav_box" x="2" y="400" width="196" height="50"/>
-    <a href="injector2.html" target="_top">
-      <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 MeV</text>
+    <a href="860keV.html" target="_top">
+      <text class="nav_label" x="100" y="432" text-anchor="middle"> &gt;&gt; 860 keV</text>
     </a>
   </g>
 
@@ -93,7 +93,7 @@
     <text id="$DK_TEMP_RUCK_TEXT" class="value" x="265" y="500">99.9 degC</text>
   </g>
 
-  <g id="Connecting Lines">
+  <g id="Miscellaneous Vacuum Pipes">
     <line class="tube" x1="350"  y1="350" x2="350"  y2="500"/>
     <line class="tube" x1="750"  y1="350" x2="750"  y2="500"/>
     <line class="tube" x1="155"  y1="350" x2="500"  y2="350"/>
