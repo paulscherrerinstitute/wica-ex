@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="100%" viewBox="0 0 1500 1000" xmlns="http://www.w3.org/2000/svg">
-
+<svg xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Vacuum Valve. Supported vars: 'component_fill_color'. -->
-    <symbol id="vacuum_valve" viewBox="0 0 100 100">
-      <title>vacuum valve</title>
+    <!-- Vacuum Valve: Vertical. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_valve_vert" viewBox="0 0 100 100">
+      <title>vacuum valve: vertical</title>
       <rect x="22" y="2" width="56" height="96" fill="lightgray" stroke="darkgray" stroke-width="4"/>
       <path d="M 30 15 H 70 L 30 85 H 70 L 30 15" style="fill:var(--component_fill_color)"/>
+    </symbol>
+
+    <!-- Vacuum Valve: Horizontal. Supported vars: 'component_fill_color'. -->
+    <symbol id="vacuum_valve_horiz" viewBox="0 0 100 100">
+      <title>vacuum valve: horizontal</title>
+      <rect x="2" y="22" width="96" height="56" fill="lightgray" stroke="darkgray" stroke-width="4"/>
+      <path d="M 15 30 V 70 L 85 30 V 70 L 15 30" style="fill:var(--component_fill_color)"/>
     </symbol>
 
     <!-- Vacuum Pump. Supported vars: 'component_fill_color'. -->
@@ -76,55 +82,72 @@
 
     <!-- Vacuum Tube: Vertical -->
     <symbol id="vacuum_tube_vert" viewBox="0 0 100 100">
-      <title>vacuum tube: vertical</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+      <title>vacuum tube: vertical tube</title>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Tube: Vertical 1/2 height -->
-    <symbol id="vacuum_tube_vert_half" viewBox="0 0 100 100">
-      <title>vacuum tube: vertical 1/2</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+    <!-- Vacuum Tube: Vertical Upper -->
+    <symbol id="vacuum_tube_vert_upper" viewBox="0 0 100 100">
+      <title>vacuum tube: vertical upper</title>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Tube: Vertical Lower -->
+    <symbol id="vacuum_tube_vert_lower" viewBox="0 0 100 100">
+      <title>vacuum tube: vertical lower</title>
+      <line x1="50" y1="50" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <!-- Vacuum Tube: Horizontal -->
     <symbol id="vacuum_tube_horiz" viewBox="0 0 100 100">
       <title>vacuum tube: horizontal</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Tube: Horizontal 1/2 Width -->
-    <symbol id="vacuum_tube_horiz_half" viewBox="0 0 100 100">
-      <title>vacuum tube: horizontal 1/2</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+    <!-- Vacuum Tube: Horizontal Left -->
+    <symbol id="vacuum_tube_horiz_left" viewBox="0 0 100 100">
+      <title>vacuum tube: horizontal left</title>
       <line x1="0" y1="50" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Tube: T-Section -->
-    <symbol id="vacuum_tube_t" viewBox="0 0 100 100">
-      <title>vacuum tube: T-section</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
+    <!-- Vacuum Tube: Horizontal Right -->
+    <symbol id="vacuum_tube_horiz_right" viewBox="0 0 100 100">
+      <title>vacuum tube: horizontal right</title>
+      <line x1="50" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Tube: T-Section Upper-->
+    <symbol id="vacuum_tube_t_upper" viewBox="0 0 100 100">
+      <title>vacuum tube: T-section upper</title>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="50" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+
+    <!-- Vacuum Tube: T-Section Lower-->
+    <symbol id="vacuum_tube_t_lower" viewBox="0 0 100 100">
+      <title>vacuum tube: T-section lower</title>
+      <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
+      <line x1="50" y1="50" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
     <!-- Vacuum Tube: X-Section -->
     <symbol id="vacuum_tube_x" viewBox="0 0 100 100">
       <title>vacuum tube: X-section</title>
-      <rect x="0" y="0" width="100" height="100" fill-opacity="0"/>
       <line x1="0" y1="50" x2="100" y2="50" stroke="darkgray" stroke-width="4"/>
       <line x1="50" y1="0" x2="50" y2="100" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-    <!-- Vacuum Tube: Hemispherical -->
-    <symbol id="vacuum_tube_h" viewBox="0 0 100 100" overflow="visible">
-      <title>vacuum tube: hemisphere</title>
-      <rect width="100" height="100" fill-opacity="0" />
-      <path d="M 0 0 A 50 50 0 0 1 0 100" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+    <!-- Vacuum Tube: Hemisphere Left -->
+    <symbol id="vacuum_tube_hemi_left" viewBox="0 0 100 100" overflow="visible">
+      <title>vacuum tube: hemisphere left</title>
+      <path d="M 100 0 A 50 50 0 0 0 100 100" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
     </symbol>
 
-  </defs>
+    <!-- Vacuum Tube: Hemisphere Right -->
+    <symbol id="vacuum_tube_hemi_right" viewBox="0 0 100 100" overflow="visible">
+      <title>vacuum tube: hemisphere right</title>
+      <path d="M 0 0 A 50 50 0 0 1 0 100" fill-opacity="0" stroke="darkgray" stroke-width="4"/>
+    </symbol>
+</defs>
 
 </svg>

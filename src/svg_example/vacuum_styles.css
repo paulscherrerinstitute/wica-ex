@@ -1,12 +1,8 @@
-/* Declared the fact that this is a SVG stylesheet */
-
-@namespace svg url(http://www.w3.org/2000/svg);
-
 .nav_box {
     fill: lightgray;
     stroke: darkgray;
     stroke-width:4;
-    rx: 8
+    rx: 8;
 }
 
 .nav_label {
@@ -51,8 +47,6 @@
     fill: blue;
 }
 
-/* As SVG does not provide a default visual style for links, it's considered best practice to add some. */
-/* The namespace prefix is specified explicitly to avoid clashes with the CSS name space. */
-svg|a:link {
+a:link {
     cursor: pointer;
 }
